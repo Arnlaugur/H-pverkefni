@@ -1,0 +1,2 @@
+H:\hopverkefni\C#\Login Form\Login Form\bin\Debug\Login Form.exe.config
+H:\Hópverkefni\Hopverkefni-master\C#\Login Form\Login Form\bin\Debug\Login Form.exe.config
