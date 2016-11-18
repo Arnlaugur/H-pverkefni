@@ -1,1 +1,2 @@
 #Hópverkefni
+-Arnlaugur og Bjarki
