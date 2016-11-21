@@ -1,0 +1,13 @@
+Nafn gagnagrunns: starfsmenn
+
+CREATE TABLE starfsmenn
+(
+	Nafn VARCHAR(255),
+	Sími VARCHAR(7),
+	Email VARCHAR(255),
+	Mættur VARCHAR(3),
+	Veikur VARCHAR(3),
+	Hlutverk VARCHAR(255),
+	Notendanafn VARCHAR(6),
+	Password VARCHAR(255)
+);
