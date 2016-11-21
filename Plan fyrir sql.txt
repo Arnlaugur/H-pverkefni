@@ -1,0 +1,1 @@
+Nafn, Sími, Email, Mættur, Veikur, Hlutverk, Notendanafn, Password
