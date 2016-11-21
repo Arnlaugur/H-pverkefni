@@ -1,2 +1,10 @@
 H:\hopverkefni\C#\Login Form\Login Form\bin\Debug\Login Form.exe.config
 H:\Hópverkefni\Hopverkefni-master\C#\Login Form\Login Form\bin\Debug\Login Form.exe.config
+H:\Hopverkefni\C#\Login Form\Login Form\obj\Debug\Login Form.csprojResolveAssemblyReference.cache
+H:\Hopverkefni\C#\Login Form\Login Form\obj\Debug\Login_Form.Form1.resources
+H:\Hopverkefni\C#\Login Form\Login Form\obj\Debug\Login_Form.Properties.Resources.resources
+H:\Hopverkefni\C#\Login Form\Login Form\obj\Debug\Login Form.csproj.GenerateResource.Cache
+H:\Hopverkefni\C#\Login Form\Login Form\bin\Debug\Login Form.exe
+H:\Hopverkefni\C#\Login Form\Login Form\bin\Debug\Login Form.pdb
+H:\Hopverkefni\C#\Login Form\Login Form\obj\Debug\Login Form.exe
+H:\Hopverkefni\C#\Login Form\Login Form\obj\Debug\Login Form.pdb
