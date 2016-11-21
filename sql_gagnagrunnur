@@ -11,3 +11,7 @@ CREATE TABLE starfsmenn
 	Notendanafn VARCHAR(6),
 	Password VARCHAR(255)
 );
+
+INSERT INTO starfsmenn (Nafn, Sími, Email, Mættur, Veikur, Hlutverk, Notendanafn, Password)
+VALUES ('Arnlaugur', '6618982', 'laugi99@hotmail.com', '0', '0', 'Yfirmaður', 'ArnSam', 'mypassword')
+('Bjarki', '8955405', 'Bjarki.thor@outlook.com', '0', '0', 'Yfirmaður', 'BjaÞór', 'mypassword')
