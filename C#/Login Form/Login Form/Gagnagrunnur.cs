@@ -78,5 +78,16 @@ namespace Login_Form
             }
             return Faerslur;
         }
+        public void SettInnSqlToflu(string nafn, int skuld) //Aðferð til að setja í grunn
+        {
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "INSERT INTO hlutaprof3 (nafn, skuld) VALUES ('" + nafn + "','" + skuld + "');";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                nySQLskipun.ExecuteNonQuery();
+                CloseConnection();
+            }
+
+        }
     }
 }
