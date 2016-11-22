@@ -12,7 +12,7 @@ namespace Login_Form
 {
     public partial class Form1 : Form
     {
-        
+        Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
         public Form1()
         {
             InitializeComponent();
@@ -23,7 +23,38 @@ namespace Login_Form
             string Notendanafn = tb_Notendanafn.Text;
             string PasswordA = tb_Password.Text;
             string PasswordB = Encryption(PasswordA);
-            
+            List<string> linur = new List<string>();
+
+            string[] arr = new string[2];
+
+            ListViewItem itm;
+
+            try
+            {
+                linur = gagnagrunnur.LoginCheck();
+                foreach (string lin in linur)
+                {
+                    string[] linaUrLista = lin.Split('-');
+                    string NotendanafnB = linaUrLista[0];
+                    string PasswordC = linaUrLista[1];
+                    
+
+                    arr[0] = NotendanafnB;
+                    arr[1] = PasswordC;
+                    if (arr[1] == PasswordA)
+                    {
+                        
+                    }
+                    
+
+                    itm = new ListViewItem(arr);
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
         static string Encryption(string pass)
         {

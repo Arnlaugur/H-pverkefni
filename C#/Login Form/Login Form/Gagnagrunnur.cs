@@ -54,13 +54,13 @@ namespace Login_Form
                 throw ex;
             }
         }
-        public List<string> LesautSQLToflu()
+        public List<string> LoginCheck()
         {
             List<string> Faerslur = new List<string>();
             string lina = null;
             if (OpenConnection() == true)
             {
-                fyrirspurn = "SELECT Nafn, Kyn, Aldur FROM hlutaprof2";
+                fyrirspurn = "SELECT notendanafn, password FROM Starfsmenn";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 sqllesari = nySQLskipun.ExecuteReader();
                 while (sqllesari.Read())
