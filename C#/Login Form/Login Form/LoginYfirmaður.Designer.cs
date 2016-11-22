@@ -37,7 +37,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.bt_Ráða = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -121,14 +121,14 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Sími:";
             // 
-            // button4
+            // bt_Ráða
             // 
-            this.button4.Location = new System.Drawing.Point(12, 175);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(158, 23);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Ráða starfsmann";
-            this.button4.UseVisualStyleBackColor = true;
+            this.bt_Ráða.Location = new System.Drawing.Point(12, 175);
+            this.bt_Ráða.Name = "bt_Ráða";
+            this.bt_Ráða.Size = new System.Drawing.Size(158, 23);
+            this.bt_Ráða.TabIndex = 9;
+            this.bt_Ráða.Text = "Ráða starfsmann";
+            this.bt_Ráða.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
@@ -155,7 +155,7 @@
             this.ClientSize = new System.Drawing.Size(697, 460);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.bt_Ráða);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
@@ -184,7 +184,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button bt_Ráða;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
     }

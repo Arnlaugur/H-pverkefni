@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace Login_Form
 {
-    public partial class LoginYfirmaður : Form
+    public partial class RadaStarfsmann : Form
     {
-        public LoginYfirmaður()
+        public RadaStarfsmann()
         {
             InitializeComponent();
         }
-
-        
     }
 }
