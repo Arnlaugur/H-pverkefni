@@ -78,5 +78,29 @@ namespace Login_Form
             }
             return Faerslur;
         }
+        public List<string> SynaYfirmenn()
+        {
+            List<string> Faerslur = new List<string>();
+            string lina = null;
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "SELECT Nafn, Sími, Email, Mættur, Veikur, Hlutverk, Notendanafn, Frí FROM starfsmenn";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                sqllesari = nySQLskipun.ExecuteReader();
+                while (sqllesari.Read())
+                {
+                    for (int i = 0; i < sqllesari.FieldCount; i++)
+                    {
+                        lina += (sqllesari.GetValue(i).ToString()) + "-";
+                    }
+                    Faerslur.Add(lina);
+                    lina = null;
+
+                }
+                CloseConnection();
+                return Faerslur;
+            }
+            return Faerslur;
+        }
     }
 }

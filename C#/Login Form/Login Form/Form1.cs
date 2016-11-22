@@ -35,7 +35,7 @@ namespace Login_Form
             string Notendanafn = tb_Notendanafn.Text;
             string PasswordA = tb_Password.Text;
             string PasswordB = Encryption(PasswordA);
-            textBox1.Text = PasswordB;
+            tb_Password.Text = PasswordB;
             List<string> linur = new List<string>();
 
             string[] arr = new string[3];
