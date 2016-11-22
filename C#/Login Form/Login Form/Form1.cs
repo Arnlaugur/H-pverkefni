@@ -16,7 +16,10 @@ namespace Login_Form
         Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
         public Form1()
         {
+            
+            
             InitializeComponent();
+            tb_Password.PasswordChar = '*';
             try
             {
                 gagnagrunnur.TengingVidGagnagrunn();
