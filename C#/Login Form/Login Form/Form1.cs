@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
+//Hópverkefni 3.önn - Arnlaugur og Bjarki
 
 namespace Login_Form
 {
@@ -16,8 +17,6 @@ namespace Login_Form
         Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
         public Form1()
         {
-            
-            
             InitializeComponent();
             tb_Password.PasswordChar = '*';
             try
@@ -35,10 +34,9 @@ namespace Login_Form
             string Notendanafn = tb_Notendanafn.Text;
             string PasswordA = tb_Password.Text;
             string PasswordB = Encryption(PasswordA);
-<<<<<<< HEAD
-=======
+
             tb_Password.Text = PasswordB;
->>>>>>> Vegur-Bjarki
+
             List<string> linur = new List<string>();
 
             string[] arr = new string[3];
@@ -85,6 +83,7 @@ namespace Login_Form
                 MessageBox.Show(ex.ToString());
             }
         }
+        //Password Encryption Kóði:
         static string Encryption(string pass)
         {
             using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
