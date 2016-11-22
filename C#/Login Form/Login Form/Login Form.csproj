@@ -56,10 +56,28 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Gagnagrunnur.cs" />
+    <Compile Include="LoginStarfsmenn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginStarfsmenn.Designer.cs">
+      <DependentUpon>LoginStarfsmenn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginYfirmaður.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginYfirmaður.Designer.cs">
+      <DependentUpon>LoginYfirmaður.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginStarfsmenn.resx">
+      <DependentUpon>LoginStarfsmenn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginYfirmaður.resx">
+      <DependentUpon>LoginYfirmaður.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
