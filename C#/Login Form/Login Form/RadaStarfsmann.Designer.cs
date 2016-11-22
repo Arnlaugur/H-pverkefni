@@ -47,6 +47,7 @@
             this.bt_Raða.TabIndex = 0;
             this.bt_Raða.Text = "Ráða starfsmann";
             this.bt_Raða.UseVisualStyleBackColor = true;
+            this.bt_Raða.Click += new System.EventHandler(this.bt_Raða_Click);
             // 
             // tb_Nafn
             // 

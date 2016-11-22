@@ -129,6 +129,7 @@
             this.bt_Ráða.TabIndex = 9;
             this.bt_Ráða.Text = "Ráða starfsmann";
             this.bt_Ráða.UseVisualStyleBackColor = true;
+            this.bt_Ráða.Click += new System.EventHandler(this.bt_Ráða_Click);
             // 
             // button5
             // 

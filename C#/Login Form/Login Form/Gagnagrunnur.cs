@@ -78,11 +78,14 @@ namespace Login_Form
             }
             return Faerslur;
         }
-        public void SettInnSqlToflu(string nafn, int skuld) //Aðferð til að setja í grunn
+        public void SettInnSqlToflu(string nafn, string sími, string email, string hlutverk, string notendanafn) //Aðferð til að setja í grunn
         {
             if (OpenConnection() == true)
             {
-                fyrirspurn = "INSERT INTO hlutaprof3 (nafn, skuld) VALUES ('" + nafn + "','" + skuld + "');";
+                int mættur = 0;
+                int veikur = 0;
+                int frí = 0;
+                fyrirspurn = "INSERT INTO Starfsmenn (nafn, sími, email, mættur, veikur, hlutverk, notendanafn, frí) VALUES ('" + nafn + "','" + sími + "','" + email + "','" + mættur + "','" + veikur + "','" + hlutverk + "','" + notendanafn + "','" + frí +"');";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 nySQLskipun.ExecuteNonQuery();
                 CloseConnection();

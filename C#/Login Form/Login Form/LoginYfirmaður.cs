@@ -17,6 +17,12 @@ namespace Login_Form
             InitializeComponent();
         }
 
+        private void bt_Ráða_Click(object sender, EventArgs e)
+        {
+            RadaStarfsmann Raða = new RadaStarfsmann();
+            Raða.Show();
+        }
+
         
     }
 }
