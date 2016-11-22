@@ -16,7 +16,10 @@ namespace Login_Form
         Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
         public Form1()
         {
+            
+            
             InitializeComponent();
+            tb_Password.PasswordChar = '*';
             try
             {
                 gagnagrunnur.TengingVidGagnagrunn();
@@ -32,28 +35,41 @@ namespace Login_Form
             string Notendanafn = tb_Notendanafn.Text;
             string PasswordA = tb_Password.Text;
             string PasswordB = Encryption(PasswordA);
+            textBox1.Text = PasswordB;
             List<string> linur = new List<string>();
 
-            string[] arr = new string[2];
+            string[] arr = new string[3];
 
             ListViewItem itm;
-
+            
             try
             {
                 linur = gagnagrunnur.LoginCheck();
                 foreach (string lin in linur)
                 {
                     string[] linaUrLista = lin.Split('-');
-                    string NotendanafnB = linaUrLista[0];
-                    string PasswordC = linaUrLista[1];
+                    string Hlutverk = linaUrLista[0];
+                    string NotendanafnB = linaUrLista[1];
+                    string PasswordC = linaUrLista[2];
                     
-
-                    arr[0] = NotendanafnB;
-                    arr[1] = PasswordC;
-                    if (arr[1] == PasswordA)
+                    arr[0] = Hlutverk;
+                    arr[1] = NotendanafnB;
+                    arr[2] = PasswordC;
+                    if (Hlutverk == "Starfsmaður")
                     {
-                        LoginStarfsmenn login = new LoginStarfsmenn();
-                        login.Show();
+                        if (arr[2] == PasswordB)
+                        {
+                            LoginStarfsmenn login = new LoginStarfsmenn();
+                            login.Show();
+                        }
+                    }
+                    else if (Hlutverk == "Yfirmaður")
+                    {
+                        if (arr[2] == PasswordB)
+                        {
+                            LoginYfirmaður login = new LoginYfirmaður();
+                            login.Show();
+                        }
                     }
                     
 
