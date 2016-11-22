@@ -60,7 +60,7 @@ namespace Login_Form
             string lina = null;
             if (OpenConnection() == true)
             {
-                fyrirspurn = "SELECT notendanafn, password FROM Starfsmenn";
+                fyrirspurn = "SELECT hlutverk, notendanafn, password FROM Starfsmenn";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 sqllesari = nySQLskipun.ExecuteReader();
                 while (sqllesari.Read())
