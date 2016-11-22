@@ -67,7 +67,7 @@ namespace Login_Form
                 {
                     for (int i = 0; i < sqllesari.FieldCount; i++)
                     {
-                        lina += (sqllesari.GetValue(i).ToString()) + ":";
+                        lina += (sqllesari.GetValue(i).ToString()) + "-";
                     }
                     Faerslur.Add(lina);
                     lina = null;

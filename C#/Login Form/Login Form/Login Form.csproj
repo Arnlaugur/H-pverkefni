@@ -36,6 +36,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\MySql.Data (2).dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=1.0.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Security" />

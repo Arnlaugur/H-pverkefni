@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
-using MySql.Data.MySqlClient;
+
 namespace Login_Form
 {
     public partial class Form1 : Form
