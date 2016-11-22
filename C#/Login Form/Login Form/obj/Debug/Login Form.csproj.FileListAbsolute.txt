@@ -8,3 +8,5 @@ H:\Hopverkefni\C#\Login Form\Login Form\bin\Debug\Login Form.exe
 H:\Hopverkefni\C#\Login Form\Login Form\bin\Debug\Login Form.pdb
 H:\Hopverkefni\C#\Login Form\Login Form\obj\Debug\Login Form.exe
 H:\Hopverkefni\C#\Login Form\Login Form\obj\Debug\Login Form.pdb
+H:\Hopverkefni\C#\Login Form\Login Form\obj\Debug\Login_Form.LoginStarfsmenn.resources
+H:\Hopverkefni\C#\Login Form\Login Form\obj\Debug\Login_Form.LoginYfirmaður.resources

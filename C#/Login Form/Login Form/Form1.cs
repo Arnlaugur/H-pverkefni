@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
+using MySql.Data.MySqlClient;
 namespace Login_Form
 {
     public partial class Form1 : Form
@@ -16,6 +17,14 @@ namespace Login_Form
         public Form1()
         {
             InitializeComponent();
+            try
+            {
+                gagnagrunnur.TengingVidGagnagrunn();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void bt_Login_Click(object sender, EventArgs e)
@@ -43,7 +52,8 @@ namespace Login_Form
                     arr[1] = PasswordC;
                     if (arr[1] == PasswordA)
                     {
-                        
+                        LoginStarfsmenn login = new LoginStarfsmenn();
+                        login.Show();
                     }
                     
 
