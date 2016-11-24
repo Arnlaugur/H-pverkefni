@@ -165,5 +165,15 @@ namespace Login_Form
             }
             return Faerslur;
         }
+        public void Eyda(string nafn, string email)
+        {
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "Delete FROM starfsmenn where Notendanafn='" + nafn + "'" + " AND Email='" + email + "'";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                nySQLskipun.ExecuteNonQuery();
+                CloseConnection();
+            }
+        }
     }
 }

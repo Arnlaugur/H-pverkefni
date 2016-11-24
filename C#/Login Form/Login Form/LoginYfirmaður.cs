@@ -177,6 +177,33 @@ namespace Login_Form
             }
         }
 
+        private void btRekaStarfsmann_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            string nafnNotenda = tbRekaNafn.Text;
+            string emailNotenda = tbRekaEmail.Text;
+            try
+            {
+                gagnagrunnur.Eyda(nafnNotenda, emailNotenda);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            tbRekaNafn.Clear();
+            tbRekaEmail.Clear();
+        }
+
+        private void btSendaIFrí_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btMotd_Click(object sender, EventArgs e)
+        {
+
+        }
+
         
     }
 }
