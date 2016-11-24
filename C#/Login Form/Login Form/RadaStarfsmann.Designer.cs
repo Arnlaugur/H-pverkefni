@@ -41,7 +41,7 @@
             // 
             // bt_Raða
             // 
-            this.bt_Raða.Location = new System.Drawing.Point(89, 132);
+            this.bt_Raða.Location = new System.Drawing.Point(128, 137);
             this.bt_Raða.Name = "bt_Raða";
             this.bt_Raða.Size = new System.Drawing.Size(100, 23);
             this.bt_Raða.TabIndex = 0;
@@ -51,28 +51,28 @@
             // 
             // tb_Nafn
             // 
-            this.tb_Nafn.Location = new System.Drawing.Point(89, 27);
+            this.tb_Nafn.Location = new System.Drawing.Point(128, 32);
             this.tb_Nafn.Name = "tb_Nafn";
             this.tb_Nafn.Size = new System.Drawing.Size(100, 20);
             this.tb_Nafn.TabIndex = 1;
             // 
             // tb_Simi
             // 
-            this.tb_Simi.Location = new System.Drawing.Point(89, 53);
+            this.tb_Simi.Location = new System.Drawing.Point(128, 58);
             this.tb_Simi.Name = "tb_Simi";
             this.tb_Simi.Size = new System.Drawing.Size(100, 20);
             this.tb_Simi.TabIndex = 2;
             // 
             // tb_Email
             // 
-            this.tb_Email.Location = new System.Drawing.Point(89, 79);
+            this.tb_Email.Location = new System.Drawing.Point(128, 84);
             this.tb_Email.Name = "tb_Email";
             this.tb_Email.Size = new System.Drawing.Size(100, 20);
             this.tb_Email.TabIndex = 3;
             // 
             // tb_Hlutverk
             // 
-            this.tb_Hlutverk.Location = new System.Drawing.Point(89, 106);
+            this.tb_Hlutverk.Location = new System.Drawing.Point(128, 111);
             this.tb_Hlutverk.Name = "tb_Hlutverk";
             this.tb_Hlutverk.Size = new System.Drawing.Size(100, 20);
             this.tb_Hlutverk.TabIndex = 4;
@@ -80,7 +80,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 34);
+            this.label1.Location = new System.Drawing.Point(89, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 5;
@@ -89,7 +89,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 60);
+            this.label2.Location = new System.Drawing.Point(91, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 6;
@@ -98,7 +98,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 85);
+            this.label3.Location = new System.Drawing.Point(87, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 7;
@@ -107,7 +107,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(33, 113);
+            this.label4.Location = new System.Drawing.Point(72, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 13);
             this.label4.TabIndex = 8;
@@ -117,7 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 200);
+            this.ClientSize = new System.Drawing.Size(337, 200);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -128,6 +128,7 @@
             this.Controls.Add(this.tb_Nafn);
             this.Controls.Add(this.bt_Raða);
             this.Name = "RadaStarfsmann";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RadaStarfsmann";
             this.ResumeLayout(false);
             this.PerformLayout();
