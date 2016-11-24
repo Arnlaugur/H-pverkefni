@@ -34,23 +34,25 @@
             this.btSýnaYfirmenn = new System.Windows.Forms.Button();
             this.btRekaStarfsmann = new System.Windows.Forms.Button();
             this.tbRekaNafn = new System.Windows.Forms.TextBox();
-            this.tbRekaSimi = new System.Windows.Forms.TextBox();
+            this.tbRekaEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.bt_Ráða = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btSendaIFrí = new System.Windows.Forms.Button();
+            this.btMotd = new System.Windows.Forms.Button();
             this.btSýnaAlla = new System.Windows.Forms.Button();
+            this.tbMotd = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listView1
             // 
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(176, 117);
+            this.listView1.Location = new System.Drawing.Point(176, 12);
             this.listView1.Name = "listView1";
             this.listView1.Scrollable = false;
-            this.listView1.Size = new System.Drawing.Size(610, 331);
+            this.listView1.Size = new System.Drawing.Size(610, 436);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -58,11 +60,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(287, 9);
+            this.label1.Location = new System.Drawing.Point(10, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(11, 13);
+            this.label1.Size = new System.Drawing.Size(15, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "*";
+            this.label1.Text = "**";
             // 
             // btSýnaStarfsmenn
             // 
@@ -92,38 +94,39 @@
             this.btRekaStarfsmann.TabIndex = 4;
             this.btRekaStarfsmann.Text = "Reka starfsmann";
             this.btRekaStarfsmann.UseVisualStyleBackColor = true;
+            this.btRekaStarfsmann.Click += new System.EventHandler(this.btRekaStarfsmann_Click);
             // 
             // tbRekaNafn
             // 
-            this.tbRekaNafn.Location = new System.Drawing.Point(53, 262);
+            this.tbRekaNafn.Location = new System.Drawing.Point(91, 262);
             this.tbRekaNafn.Name = "tbRekaNafn";
-            this.tbRekaNafn.Size = new System.Drawing.Size(118, 20);
+            this.tbRekaNafn.Size = new System.Drawing.Size(80, 20);
             this.tbRekaNafn.TabIndex = 5;
             // 
-            // tbRekaSimi
+            // tbRekaEmail
             // 
-            this.tbRekaSimi.Location = new System.Drawing.Point(53, 288);
-            this.tbRekaSimi.Name = "tbRekaSimi";
-            this.tbRekaSimi.Size = new System.Drawing.Size(118, 20);
-            this.tbRekaSimi.TabIndex = 6;
+            this.tbRekaEmail.Location = new System.Drawing.Point(53, 288);
+            this.tbRekaEmail.Name = "tbRekaEmail";
+            this.tbRekaEmail.Size = new System.Drawing.Size(118, 20);
+            this.tbRekaEmail.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(13, 265);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Nafn:";
+            this.label2.Text = "Notendanafn:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(13, 291);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 13);
+            this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Sími:";
+            this.label3.Text = "Email:";
             // 
             // bt_Ráða
             // 
@@ -135,23 +138,25 @@
             this.bt_Ráða.UseVisualStyleBackColor = true;
             this.bt_Ráða.Click += new System.EventHandler(this.bt_Ráða_Click);
             // 
-            // button5
+            // btSendaIFrí
             // 
-            this.button5.Location = new System.Drawing.Point(13, 314);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(158, 23);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "Senda í frí";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btSendaIFrí.Location = new System.Drawing.Point(13, 314);
+            this.btSendaIFrí.Name = "btSendaIFrí";
+            this.btSendaIFrí.Size = new System.Drawing.Size(158, 23);
+            this.btSendaIFrí.TabIndex = 10;
+            this.btSendaIFrí.Text = "Senda í frí";
+            this.btSendaIFrí.UseVisualStyleBackColor = true;
+            this.btSendaIFrí.Click += new System.EventHandler(this.btSendaIFrí_Click);
             // 
-            // button6
+            // btMotd
             // 
-            this.button6.Location = new System.Drawing.Point(14, 343);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(157, 23);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "Motd";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btMotd.Location = new System.Drawing.Point(14, 343);
+            this.btMotd.Name = "btMotd";
+            this.btMotd.Size = new System.Drawing.Size(157, 23);
+            this.btMotd.TabIndex = 11;
+            this.btMotd.Text = "Motd";
+            this.btMotd.UseVisualStyleBackColor = true;
+            this.btMotd.Click += new System.EventHandler(this.btMotd_Click);
             // 
             // btSýnaAlla
             // 
@@ -163,18 +168,36 @@
             this.btSýnaAlla.UseVisualStyleBackColor = true;
             this.btSýnaAlla.Click += new System.EventHandler(this.btSýnaAlla_Click);
             // 
+            // tbMotd
+            // 
+            this.tbMotd.Location = new System.Drawing.Point(50, 377);
+            this.tbMotd.Name = "tbMotd";
+            this.tbMotd.Size = new System.Drawing.Size(118, 20);
+            this.tbMotd.TabIndex = 13;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(10, 380);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Motd:";
+            // 
             // LoginYfirmaður
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(797, 460);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.tbMotd);
             this.Controls.Add(this.btSýnaAlla);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btMotd);
+            this.Controls.Add(this.btSendaIFrí);
             this.Controls.Add(this.bt_Ráða);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tbRekaSimi);
+            this.Controls.Add(this.tbRekaEmail);
             this.Controls.Add(this.tbRekaNafn);
             this.Controls.Add(this.btRekaStarfsmann);
             this.Controls.Add(this.btSýnaYfirmenn);
@@ -197,12 +220,14 @@
         private System.Windows.Forms.Button btSýnaYfirmenn;
         private System.Windows.Forms.Button btRekaStarfsmann;
         private System.Windows.Forms.TextBox tbRekaNafn;
-        private System.Windows.Forms.TextBox tbRekaSimi;
+        private System.Windows.Forms.TextBox tbRekaEmail;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button bt_Ráða;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btSendaIFrí;
+        private System.Windows.Forms.Button btMotd;
         private System.Windows.Forms.Button btSýnaAlla;
+        private System.Windows.Forms.TextBox tbMotd;
+        private System.Windows.Forms.Label label4;
     }
 }
