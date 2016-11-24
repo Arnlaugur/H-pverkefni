@@ -37,7 +37,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(131, 9);
             this.label1.Name = "label1";
@@ -47,7 +47,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button1.Location = new System.Drawing.Point(12, 44);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 33);
@@ -57,7 +57,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Control;
+            this.button2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button2.Location = new System.Drawing.Point(132, 44);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(96, 33);
@@ -67,7 +67,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.Control;
+            this.button3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button3.Location = new System.Drawing.Point(253, 44);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(96, 33);
@@ -79,7 +79,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(361, 89);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
