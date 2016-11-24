@@ -165,7 +165,7 @@ namespace Login_Form
             }
             return Faerslur;
         }
-<<<<<<< HEAD
+
         public string NafnaCheck(string Notendanafn)
         {
             
@@ -192,20 +192,21 @@ namespace Login_Form
         {
             if (OpenConnection() == true)
             {
-                
-                fyrirspurn = "UPDATE Starfsmenn SET password = '" + password + "' WHERE notendanafn = '"+ Notendanafn +"';";
-=======
+
+                fyrirspurn = "UPDATE Starfsmenn SET password = '" + password + "' WHERE notendanafn = '" + Notendanafn + "';";
+            }
+        }
         public void Eyda(string nafn, string email)
         {
             if (OpenConnection() == true)
             {
                 fyrirspurn = "Delete FROM starfsmenn where Notendanafn='" + nafn + "'" + " AND Email='" + email + "'";
->>>>>>> Vegur-Bjarki
+
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 nySQLskipun.ExecuteNonQuery();
                 CloseConnection();
             }
-<<<<<<< HEAD
+
 
         }
         public List<string> notandanöfn()
@@ -232,9 +233,7 @@ namespace Login_Form
                     return Faerslur;
                 }
                 return Faerslur;
-            
-=======
->>>>>>> Vegur-Bjarki
+
         }
     }
 }
