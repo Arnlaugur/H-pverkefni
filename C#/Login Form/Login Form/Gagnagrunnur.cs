@@ -54,13 +54,13 @@ namespace Login_Form
                 throw ex;
             }
         }
-        public List<string> LoginCheck()
+        public List<string> LoginCheck(string Notendanafn)
         {
             List<string> Faerslur = new List<string>();
             string lina = null;
             if (OpenConnection() == true)
             {
-                fyrirspurn = "SELECT hlutverk, notendanafn, password FROM Starfsmenn";
+                fyrirspurn = "SELECT hlutverk, notendanafn, password FROM Starfsmenn WHERE notendanafn = '"+ Notendanafn +"'";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 sqllesari = nySQLskipun.ExecuteReader();
                 while (sqllesari.Read())
@@ -73,11 +73,12 @@ namespace Login_Form
                     lina = null;
 
                 }
-                CloseConnection();
+                //CloseConnection();
                 return Faerslur;
             }
             return Faerslur;
         }
+<<<<<<< HEAD
         public List<string> SynaYfirmenn()
         {
             List<string> Faerslur = new List<string>();
@@ -101,6 +102,21 @@ namespace Login_Form
                 return Faerslur;
             }
             return Faerslur;
+=======
+        public void SettInnSqlToflu(string nafn, string sími, string email, string hlutverk, string notendanafn) //Aðferð til að setja í grunn
+        {
+            if (OpenConnection() == true)
+            {
+                int mættur = 0;
+                int veikur = 0;
+                int frí = 0;
+                fyrirspurn = "INSERT INTO Starfsmenn (nafn, sími, email, mættur, veikur, hlutverk, notendanafn, frí) VALUES ('" + nafn + "','" + sími + "','" + email + "','" + mættur + "','" + veikur + "','" + hlutverk + "','" + notendanafn + "','" + frí +"');";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                nySQLskipun.ExecuteNonQuery();
+                //CloseConnection();
+            }
+
+>>>>>>> Vegur-Arnlaugur
         }
     }
 }

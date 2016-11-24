@@ -47,7 +47,7 @@ namespace Login_Form
             
             try
             {
-                linur = gagnagrunnur.LoginCheck();
+                linur = gagnagrunnur.LoginCheck(Notendanafn);
                 foreach (string lin in linur)
                 {
                     string[] linaUrLista = lin.Split('-');

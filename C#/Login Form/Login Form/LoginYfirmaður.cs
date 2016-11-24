@@ -26,6 +26,7 @@ namespace Login_Form
             }
         }
 
+<<<<<<< HEAD
         private void btSýnaYfirmenn_Click(object sender, EventArgs e)
         {
             listView1.Columns.Clear();
@@ -73,6 +74,12 @@ namespace Login_Form
             {
                 MessageBox.Show("villa: " + ex);
             }
+=======
+        private void bt_Ráða_Click(object sender, EventArgs e)
+        {
+            RadaStarfsmann Raða = new RadaStarfsmann();
+            Raða.Show();
+>>>>>>> Vegur-Arnlaugur
         }
 
         
