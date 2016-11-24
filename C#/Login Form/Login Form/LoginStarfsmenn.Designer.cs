@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelVelkominn = new System.Windows.Forms.Label();
             this.btSkráSemVeikur = new System.Windows.Forms.Button();
             this.btSkráIFrí = new System.Windows.Forms.Button();
             this.btSkráSemMættur = new System.Windows.Forms.Button();
+            this.labelMotd = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // labelVelkominn
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(131, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "**";
+            this.labelVelkominn.AutoSize = true;
+            this.labelVelkominn.BackColor = System.Drawing.SystemColors.Control;
+            this.labelVelkominn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelVelkominn.Location = new System.Drawing.Point(131, 9);
+            this.labelVelkominn.Name = "labelVelkominn";
+            this.labelVelkominn.Size = new System.Drawing.Size(15, 13);
+            this.labelVelkominn.TabIndex = 0;
+            this.labelVelkominn.Text = "**";
             // 
             // btSkráSemVeikur
             // 
@@ -78,19 +79,30 @@
             this.btSkráSemMættur.UseVisualStyleBackColor = false;
             this.btSkráSemMættur.Click += new System.EventHandler(this.btSkráSemMættur_Click);
             // 
+            // labelMotd
+            // 
+            this.labelMotd.AutoSize = true;
+            this.labelMotd.Location = new System.Drawing.Point(12, 8);
+            this.labelMotd.Name = "labelMotd";
+            this.labelMotd.Size = new System.Drawing.Size(15, 13);
+            this.labelMotd.TabIndex = 4;
+            this.labelMotd.Text = "**";
+            // 
             // LoginStarfsmenn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(361, 89);
+            this.Controls.Add(this.labelMotd);
             this.Controls.Add(this.btSkráSemMættur);
             this.Controls.Add(this.btSkráIFrí);
             this.Controls.Add(this.btSkráSemVeikur);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelVelkominn);
             this.Name = "LoginStarfsmenn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginStarfsmenn";
+            this.Load += new System.EventHandler(this.LoginStarfsmenn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -98,9 +110,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelVelkominn;
         private System.Windows.Forms.Button btSkráSemVeikur;
         private System.Windows.Forms.Button btSkráIFrí;
         private System.Windows.Forms.Button btSkráSemMættur;
+        private System.Windows.Forms.Label labelMotd;
     }
 }

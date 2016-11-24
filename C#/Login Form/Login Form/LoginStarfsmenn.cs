@@ -31,5 +31,10 @@ namespace Login_Form
         {
 
         }
+
+        private void LoginStarfsmenn_Load(object sender, EventArgs e)
+        {
+            labelVelkominn.Text = "Velkominn " + "";
+        }
     }
 }

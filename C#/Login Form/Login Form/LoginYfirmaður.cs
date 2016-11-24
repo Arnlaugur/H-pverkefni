@@ -201,7 +201,9 @@ namespace Login_Form
 
         private void btMotd_Click(object sender, EventArgs e)
         {
-
+            string motd = tbMotd.Text;
+            MessageBox.Show("==============\nMessage of the day:\n==============\n" + motd);
+            tbMotd.Clear();
         }
 
         

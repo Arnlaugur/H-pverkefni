@@ -41,6 +41,8 @@
             this.btSendaIFrí = new System.Windows.Forms.Button();
             this.btMotd = new System.Windows.Forms.Button();
             this.btSýnaAlla = new System.Windows.Forms.Button();
+            this.tbMotd = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listView1
@@ -60,9 +62,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(10, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(11, 13);
+            this.label1.Size = new System.Drawing.Size(15, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "*";
+            this.label1.Text = "**";
             // 
             // btSýnaStarfsmenn
             // 
@@ -166,11 +168,29 @@
             this.btSýnaAlla.UseVisualStyleBackColor = true;
             this.btSýnaAlla.Click += new System.EventHandler(this.btSýnaAlla_Click);
             // 
+            // tbMotd
+            // 
+            this.tbMotd.Location = new System.Drawing.Point(50, 377);
+            this.tbMotd.Name = "tbMotd";
+            this.tbMotd.Size = new System.Drawing.Size(118, 20);
+            this.tbMotd.TabIndex = 13;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(10, 380);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Motd:";
+            // 
             // LoginYfirmaður
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(797, 460);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.tbMotd);
             this.Controls.Add(this.btSýnaAlla);
             this.Controls.Add(this.btMotd);
             this.Controls.Add(this.btSendaIFrí);
@@ -207,5 +227,7 @@
         private System.Windows.Forms.Button btSendaIFrí;
         private System.Windows.Forms.Button btMotd;
         private System.Windows.Forms.Button btSýnaAlla;
+        private System.Windows.Forms.TextBox tbMotd;
+        private System.Windows.Forms.Label label4;
     }
 }
