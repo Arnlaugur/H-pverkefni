@@ -36,10 +36,6 @@ namespace Login_Form
             string PasswordB = Encryption(PasswordA);
 
             tb_Password.Text = PasswordB;
-<<<<<<< HEAD
-=======
-
->>>>>>> 714b9397accb8d47a0607305942a6fdcc1407ecf
             List<string> linur = new List<string>();
 
             string[] arr = new string[3];
