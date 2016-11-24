@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btSkráSemVeikur = new System.Windows.Forms.Button();
+            this.btSkráIFrí = new System.Windows.Forms.Button();
+            this.btSkráSemMættur = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -41,39 +41,42 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(131, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(15, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.label1.Text = "**";
             // 
-            // button1
+            // btSkráSemVeikur
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(12, 44);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 33);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Skrá sem veikur";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btSkráSemVeikur.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btSkráSemVeikur.Location = new System.Drawing.Point(12, 44);
+            this.btSkráSemVeikur.Name = "btSkráSemVeikur";
+            this.btSkráSemVeikur.Size = new System.Drawing.Size(96, 33);
+            this.btSkráSemVeikur.TabIndex = 1;
+            this.btSkráSemVeikur.Text = "Skrá sem veikur";
+            this.btSkráSemVeikur.UseVisualStyleBackColor = false;
+            this.btSkráSemVeikur.Click += new System.EventHandler(this.btSkráSemVeikur_Click);
             // 
-            // button2
+            // btSkráIFrí
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button2.Location = new System.Drawing.Point(132, 44);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 33);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Skrá í frí";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btSkráIFrí.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btSkráIFrí.Location = new System.Drawing.Point(132, 44);
+            this.btSkráIFrí.Name = "btSkráIFrí";
+            this.btSkráIFrí.Size = new System.Drawing.Size(96, 33);
+            this.btSkráIFrí.TabIndex = 2;
+            this.btSkráIFrí.Text = "Skrá í frí";
+            this.btSkráIFrí.UseVisualStyleBackColor = false;
+            this.btSkráIFrí.Click += new System.EventHandler(this.btSkráIFrí_Click);
             // 
-            // button3
+            // btSkráSemMættur
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button3.Location = new System.Drawing.Point(253, 44);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 33);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Skrá sem mættur";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btSkráSemMættur.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btSkráSemMættur.Location = new System.Drawing.Point(253, 44);
+            this.btSkráSemMættur.Name = "btSkráSemMættur";
+            this.btSkráSemMættur.Size = new System.Drawing.Size(96, 33);
+            this.btSkráSemMættur.TabIndex = 3;
+            this.btSkráSemMættur.Text = "Skrá sem mættur";
+            this.btSkráSemMættur.UseVisualStyleBackColor = false;
+            this.btSkráSemMættur.Click += new System.EventHandler(this.btSkráSemMættur_Click);
             // 
             // LoginStarfsmenn
             // 
@@ -81,9 +84,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(361, 89);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btSkráSemMættur);
+            this.Controls.Add(this.btSkráIFrí);
+            this.Controls.Add(this.btSkráSemVeikur);
             this.Controls.Add(this.label1);
             this.Name = "LoginStarfsmenn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -96,8 +99,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btSkráSemVeikur;
+        private System.Windows.Forms.Button btSkráIFrí;
+        private System.Windows.Forms.Button btSkráSemMættur;
     }
 }

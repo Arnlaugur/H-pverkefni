@@ -16,5 +16,20 @@ namespace Login_Form
         {
             InitializeComponent();
         }
+
+        private void btSkráSemVeikur_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btSkráIFrí_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btSkráSemMættur_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
