@@ -54,13 +54,13 @@ namespace Login_Form
                 throw ex;
             }
         }
-        public List<string> LoginCheck()
+        public List<string> LoginCheck(string Notendanafn)
         {
             List<string> Faerslur = new List<string>();
             string lina = null;
             if (OpenConnection() == true)
             {
-                fyrirspurn = "SELECT hlutverk, notendanafn, password FROM Starfsmenn";
+                fyrirspurn = "SELECT hlutverk, notendanafn, password FROM Starfsmenn WHERE notendanafn = '"+ Notendanafn +"'";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 sqllesari = nySQLskipun.ExecuteReader();
                 while (sqllesari.Read())
@@ -73,7 +73,7 @@ namespace Login_Form
                     lina = null;
 
                 }
-                CloseConnection();
+                //CloseConnection();
                 return Faerslur;
             }
             return Faerslur;
@@ -88,7 +88,7 @@ namespace Login_Form
                 fyrirspurn = "INSERT INTO Starfsmenn (nafn, sími, email, mættur, veikur, hlutverk, notendanafn, frí) VALUES ('" + nafn + "','" + sími + "','" + email + "','" + mættur + "','" + veikur + "','" + hlutverk + "','" + notendanafn + "','" + frí +"');";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 nySQLskipun.ExecuteNonQuery();
-                CloseConnection();
+                //CloseConnection();
             }
 
         }

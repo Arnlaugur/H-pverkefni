@@ -12,9 +12,18 @@ namespace Login_Form
 {
     public partial class LoginYfirmaður : Form
     {
+        Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
         public LoginYfirmaður()
         {
             InitializeComponent();
+            try
+            {
+                gagnagrunnur.TengingVidGagnagrunn();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void bt_Ráða_Click(object sender, EventArgs e)

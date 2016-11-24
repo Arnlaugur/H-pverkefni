@@ -12,15 +12,24 @@ namespace Login_Form
 {
     public partial class RadaStarfsmann : Form
     {
+        Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
         public RadaStarfsmann()
         {
             
             InitializeComponent();
+            try
+            {
+                gagnagrunnur.TengingVidGagnagrunn();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void bt_Raða_Click(object sender, EventArgs e)
         {
-            Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
+            
             List<string> linur = new List<string>();
             linur.Add(tb_Nafn.Text);
             string notandanafn = null;
@@ -29,7 +38,7 @@ namespace Login_Form
                 string[] linaUrLista = lin.Split(' ');
                 string nafn1 = linaUrLista[0];
                 string nafn2 = linaUrLista[1];
-                string nafn3 = linaUrLista[2];
+                
                 if (nafn2 == "")
                 {
                     if (nafn1.Length > 6)
