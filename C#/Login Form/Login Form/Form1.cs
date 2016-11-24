@@ -92,5 +92,22 @@ namespace Login_Form
                 return Convert.ToBase64String(Data);
             }
         }
+
+        private void bt_Virkja_Click(object sender, EventArgs e)
+        {
+            string Notendanafn = tb_NotendanafnVirkja.Text;
+            string PasswordVirkjaA = tb_Lykilorð1.Text;
+            string PasswordVirkjaB = tb_Lykilorð2.Text;
+            string Email = tb_Email.Text;
+
+            if (PasswordVirkjaA == PasswordVirkjaB)
+            {
+                
+            }
+            else
+            {
+                MessageBox.Show("Lykkilorð ekki alveg eins");
+            }
+        }
     }
 }

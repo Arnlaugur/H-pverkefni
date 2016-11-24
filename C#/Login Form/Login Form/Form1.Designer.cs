@@ -199,12 +199,13 @@
             // 
             // bt_Virkja
             // 
-            this.bt_Virkja.Location = new System.Drawing.Point(302, 118);
+            this.bt_Virkja.Location = new System.Drawing.Point(283, 118);
             this.bt_Virkja.Name = "bt_Virkja";
-            this.bt_Virkja.Size = new System.Drawing.Size(84, 23);
+            this.bt_Virkja.Size = new System.Drawing.Size(103, 23);
             this.bt_Virkja.TabIndex = 7;
-            this.bt_Virkja.Text = "virkja til aðgang";
+            this.bt_Virkja.Text = "virkja aðgang";
             this.bt_Virkja.UseVisualStyleBackColor = true;
+            this.bt_Virkja.Click += new System.EventHandler(this.bt_Virkja_Click);
             // 
             // tb_Lykilorð1
             // 
