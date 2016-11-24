@@ -12,6 +12,7 @@ using System.Security.Cryptography;
 
 namespace Login_Form
 {
+    
     public partial class Form1 : Form
     {
         Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
@@ -102,6 +103,15 @@ namespace Login_Form
 
             if (PasswordVirkjaA == PasswordVirkjaB)
             {
+                if (Email == gagnagrunnur.NafnaCheck(Notendanafn))
+                {
+                    PasswordVirkjaA = Encryption(PasswordVirkjaA);
+                    gagnagrunnur.PasswordSettInnSqlToflu(PasswordVirkjaA, Notendanafn);
+                }
+                else
+                {
+                    MessageBox.Show("Gögn passa ekki við notanda í gagnagrunn");
+                }
                 
             }
             else

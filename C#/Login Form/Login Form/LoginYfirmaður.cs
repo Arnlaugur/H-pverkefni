@@ -16,14 +16,7 @@ namespace Login_Form
         public LoginYfirmaður()
         {
             InitializeComponent();
-            try
-            {
-                gagnagrunnur.TengingVidGagnagrunn();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+            
         }
         private void btSýnaAlla_Click(object sender, EventArgs e)
         {

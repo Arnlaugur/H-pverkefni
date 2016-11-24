@@ -73,7 +73,7 @@ namespace Login_Form
                     lina = null;
 
                 }
-                //CloseConnection();
+                CloseConnection();
                 return Faerslur;
             }
             return Faerslur;
@@ -137,7 +137,7 @@ namespace Login_Form
                 fyrirspurn = "INSERT INTO Starfsmenn (nafn, sími, email, mættur, veikur, hlutverk, notendanafn, frí) VALUES ('" + nafn + "','" + sími + "','" + email + "','" + mættur + "','" + veikur + "','" + hlutverk + "','" + notendanafn + "','" + frí +"');";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 nySQLskipun.ExecuteNonQuery();
-                //CloseConnection();
+                CloseConnection();
             }
 
         }
@@ -165,29 +165,39 @@ namespace Login_Form
             }
             return Faerslur;
         }
-        public List<string> NafnaCheck(string Notendanafn)
+        public string NafnaCheck(string Notendanafn)
         {
-            List<string> Faerslur = new List<string>();
-            string lina = null;
+            
+            string Faerslur = null;
+            
             if (OpenConnection() == true)
             {
-                fyrirspurn = "SELECT notendanafn FROM Starfsmenn WHERE notendanafn = '" + Notendanafn + "'";
+                fyrirspurn = "SELECT email FROM Starfsmenn WHERE notendanafn = '" + Notendanafn + "'";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 sqllesari = nySQLskipun.ExecuteReader();
                 while (sqllesari.Read())
                 {
-                    for (int i = 0; i < sqllesari.FieldCount; i++)
-                    {
-                        lina += (sqllesari.GetValue(i).ToString()) + "-";
-                    }
-                    Faerslur.Add(lina);
-                    lina = null;
+                    
+                        Faerslur = sqllesari.GetValue(0).ToString();
+                    
 
                 }
-                //CloseConnection();
+                CloseConnection();
                 return Faerslur;
             }
             return Faerslur;
+        }
+        public void PasswordSettInnSqlToflu(string password, string Notendanafn) //Aðferð til að setja í grunn
+        {
+            if (OpenConnection() == true)
+            {
+                
+                fyrirspurn = "UPDATE Starfsmenn SET password = '" + password + "' WHERE notendanafn = '"+ Notendanafn +"';";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                nySQLskipun.ExecuteNonQuery();
+                CloseConnection();
+            }
+
         }
     }
 }
