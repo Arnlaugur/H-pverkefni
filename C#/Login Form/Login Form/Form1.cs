@@ -20,6 +20,8 @@ namespace Login_Form
         {
             InitializeComponent();
             tb_Password.PasswordChar = '*';
+            tb_Lykilorð1.PasswordChar = '*';
+            tb_Lykilorð2.PasswordChar = '*';
             try
             {
                 gagnagrunnur.TengingVidGagnagrunn();
