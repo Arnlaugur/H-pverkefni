@@ -78,7 +78,7 @@ namespace Login_Form
             }
             return Faerslur;
         }
-<<<<<<< HEAD
+
         public List<string> SynaYfirmenn()
         {
             List<string> Faerslur = new List<string>();
@@ -102,7 +102,7 @@ namespace Login_Form
                 return Faerslur;
             }
             return Faerslur;
-=======
+        }
         public void SettInnSqlToflu(string nafn, string sími, string email, string hlutverk, string notendanafn) //Aðferð til að setja í grunn
         {
             if (OpenConnection() == true)
@@ -116,7 +116,6 @@ namespace Login_Form
                 //CloseConnection();
             }
 
->>>>>>> Vegur-Arnlaugur
         }
     }
 }

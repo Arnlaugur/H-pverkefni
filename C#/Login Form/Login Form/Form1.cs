@@ -35,10 +35,8 @@ namespace Login_Form
             string Notendanafn = tb_Notendanafn.Text;
             string PasswordA = tb_Password.Text;
             string PasswordB = Encryption(PasswordA);
-<<<<<<< HEAD
-=======
+
             tb_Password.Text = PasswordB;
->>>>>>> Vegur-Bjarki
             List<string> linur = new List<string>();
 
             string[] arr = new string[3];
