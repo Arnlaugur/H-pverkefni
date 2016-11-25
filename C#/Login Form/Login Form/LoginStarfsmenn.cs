@@ -12,9 +12,18 @@ namespace Login_Form
 {
     public partial class LoginStarfsmenn : Form
     {
+        Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
         public LoginStarfsmenn()
         {
             InitializeComponent();
+            try
+            {
+                gagnagrunnur.TengingVidGagnagrunn();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void btSkráSemVeikur_Click(object sender, EventArgs e)

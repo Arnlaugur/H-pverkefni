@@ -17,7 +17,14 @@ namespace Login_Form
         {
             
             InitializeComponent();
-            
+            try
+            {
+                gagnagrunnur.TengingVidGagnagrunn();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void bt_Raða_Click(object sender, EventArgs e)
