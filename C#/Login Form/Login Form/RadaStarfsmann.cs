@@ -35,9 +35,12 @@ namespace Login_Form
             string notandanafn = null;
             foreach (string lin in linur)
             {
+                
                 string[] linaUrLista = lin.Split(' ');
-                string nafn1 = linaUrLista[0];
-                string nafn2 = linaUrLista[1];
+                string nafn1 = "";
+                string nafn2 = "";
+                nafn1 = linaUrLista[0];
+                nafn2 = linaUrLista[1];
                
                 if (nafn2 == "")
                 {
@@ -72,19 +75,9 @@ namespace Login_Form
             List<string> notendanöfn = new List<string>();
             notendanöfn = gagnagrunnur.notandanöfn();
 
-            for (int i = 0; i < 9; i++)
-            {
-                if (notendanöfn.Contains(notandanafn))
-                {
-                    int tala = 1;
-                    notandanafn = notandanafn.Substring(0, 5) + tala.ToString();
-                    tala++;
-                }
-                else if (notendanöfn.Contains(notandanafn) == false)
-                {
-                    gagnagrunnur.SettInnSqlToflu(tb_Nafn.Text, tb_Simi.Text, tb_Email.Text, tb_Hlutverk.Text, notandanafn);
-                }
-            }
+            
+                
+            
             
             
             
