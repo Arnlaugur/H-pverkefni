@@ -139,7 +139,6 @@ namespace Login_Form
                 nySQLskipun.ExecuteNonQuery();
                 CloseConnection();
             }
-
         }
         public List<string> SynaStarfsmenn()
         {
@@ -165,10 +164,9 @@ namespace Login_Form
             }
             return Faerslur;
         }
-<<<<<<< HEAD
+
         public string NafnaCheck(string Notendanafn)
-        {
-            
+        {         
             string Faerslur = null;
             
             if (OpenConnection() == true)
@@ -177,11 +175,8 @@ namespace Login_Form
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 sqllesari = nySQLskipun.ExecuteReader();
                 while (sqllesari.Read())
-                {
-                    
-                        Faerslur = sqllesari.GetValue(0).ToString();
-                    
-
+                {              
+                     Faerslur = sqllesari.GetValue(0).ToString();
                 }
                 CloseConnection();
                 return Faerslur;
@@ -192,25 +187,21 @@ namespace Login_Form
         {
             if (OpenConnection() == true)
             {
-                
-                fyrirspurn = "UPDATE Starfsmenn SET password = '" + password + "' WHERE notendanafn = '"+ Notendanafn +"';";
-=======
+                fyrirspurn = "UPDATE Starfsmenn SET password = '" + password + "' WHERE notendanafn = '" + Notendanafn + "';";
+            }
+        }
         public void Eyda(string nafn, string email)
         {
             if (OpenConnection() == true)
             {
                 fyrirspurn = "Delete FROM starfsmenn where Notendanafn='" + nafn + "'" + " AND Email='" + email + "'";
->>>>>>> Vegur-Bjarki
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 nySQLskipun.ExecuteNonQuery();
                 CloseConnection();
             }
-<<<<<<< HEAD
-
         }
         public List<string> notandanöfn()
-        {
-            
+        {         
                 List<string> Faerslur = new List<string>();
                 string lina = null;
                 if (OpenConnection() == true)
@@ -226,15 +217,11 @@ namespace Login_Form
                         }
                         Faerslur.Add(lina);
                         lina = null;
-
                     }
                     CloseConnection();
                     return Faerslur;
                 }
-                return Faerslur;
-            
-=======
->>>>>>> Vegur-Bjarki
+                return Faerslur;            
         }
     }
 }
