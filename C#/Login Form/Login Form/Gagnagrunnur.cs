@@ -58,6 +58,7 @@ namespace Login_Form
         {
             List<string> Faerslur = new List<string>();
             string lina = null;
+            
             if (OpenConnection() == true)
             {
                 fyrirspurn = "SELECT hlutverk, notendanafn, password FROM Starfsmenn WHERE notendanafn = '"+ Notendanafn +"'";
@@ -180,7 +181,7 @@ namespace Login_Form
                 {
                     
                         Faerslur = sqllesari.GetValue(0).ToString();
-                    
+                        
 
                 }
                 CloseConnection();
@@ -190,14 +191,16 @@ namespace Login_Form
         }
         public void PasswordSettInnSqlToflu(string password, string Notendanafn) //Aðferð til að setja í grunn
         {
+            
             if (OpenConnection() == true)
             {
-
-                fyrirspurn = "UPDATE Starfsmenn SET password = '" + password + "' WHERE notendanafn = '" + Notendanafn + "';";
+             fyrirspurn = "UPDATE Starfsmenn SET password = '" + password + "' WHERE notendanafn = '" + Notendanafn + "';";
+             CloseConnection();
             }
         }
         public void Eyda(string nafn, string email)
         {
+            
             if (OpenConnection() == true)
             {
                 fyrirspurn = "Delete FROM starfsmenn where Notendanafn='" + nafn + "'" + " AND Email='" + email + "'";
@@ -214,9 +217,10 @@ namespace Login_Form
             
                 List<string> Faerslur = new List<string>();
                 string lina = null;
+                
                 if (OpenConnection() == true)
                 {
-                    fyrirspurn = "SELECT Nafn";
+                    fyrirspurn = "SELECT Nafn FROM Starfsmenn";
                     nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                     sqllesari = nySQLskipun.ExecuteReader();
                     while (sqllesari.Read())
