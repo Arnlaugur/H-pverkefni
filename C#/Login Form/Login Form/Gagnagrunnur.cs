@@ -166,50 +166,38 @@ namespace Login_Form
             return Faerslur;
         }
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> master
         public string NafnaCheck(string Notendanafn)
-        {         
+        {
             string Faerslur = null;
-            
+
             if (OpenConnection() == true)
             {
                 fyrirspurn = "SELECT email FROM Starfsmenn WHERE notendanafn = '" + Notendanafn + "'";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 sqllesari = nySQLskipun.ExecuteReader();
                 while (sqllesari.Read())
-<<<<<<< HEAD
-                {              
-                     Faerslur = sqllesari.GetValue(0).ToString();
-=======
                 {
-                    
-                        Faerslur = sqllesari.GetValue(0).ToString();
-                        
-
->>>>>>> master
+                    Faerslur = sqllesari.GetValue(0).ToString();
                 }
-                CloseConnection();
-                return Faerslur;
+                    CloseConnection();
+                    return Faerslur;
             }
-            return Faerslur;
+                return Faerslur;
         }
         public void PasswordSettInnSqlToflu(string password, string Notendanafn) //Aðferð til að setja í grunn
         {
             
             if (OpenConnection() == true)
             {
-<<<<<<< HEAD
+
                 fyrirspurn = "UPDATE Starfsmenn SET password = '" + password + "' WHERE notendanafn = '" + Notendanafn + "';";
-=======
+
              fyrirspurn = "UPDATE Starfsmenn SET password = '" + password + "' WHERE notendanafn = '" + Notendanafn + "';";
              nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
              nySQLskipun.ExecuteNonQuery();
                 CloseConnection();
->>>>>>> master
+
             }
         }
         public void Eyda(string nafn, string email)
@@ -222,11 +210,7 @@ namespace Login_Form
                 nySQLskipun.ExecuteNonQuery();
                 CloseConnection();
             }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> master
         }
         public List<string> notandanöfn()
         {         
@@ -250,12 +234,7 @@ namespace Login_Form
                     CloseConnection();
                     return Faerslur;
                 }
-<<<<<<< HEAD
                 return Faerslur;            
-=======
-                return Faerslur;
-
->>>>>>> master
         }
     }
 }

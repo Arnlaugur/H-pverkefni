@@ -93,7 +93,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(361, 89);
+            this.ClientSize = new System.Drawing.Size(361, 87);
             this.Controls.Add(this.labelMotd);
             this.Controls.Add(this.btSkráSemMættur);
             this.Controls.Add(this.btSkráIFrí);

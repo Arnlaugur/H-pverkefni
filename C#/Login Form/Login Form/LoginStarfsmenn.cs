@@ -12,13 +12,15 @@ namespace Login_Form
 {
     public partial class LoginStarfsmenn : Form
     {
+        string nafn = null;
         Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
-        public LoginStarfsmenn()
+        public LoginStarfsmenn(string xnafn, string xNotandi,string texti)
         {
             InitializeComponent();
             try
             {
                 gagnagrunnur.TengingVidGagnagrunn();
+                nafn = xnafn;
             }
             catch (Exception ex)
             {
@@ -43,7 +45,7 @@ namespace Login_Form
 
         private void LoginStarfsmenn_Load(object sender, EventArgs e)
         {
-            labelVelkominn.Text = "Velkominn " + "";
+            labelVelkominn.Text = "Velkominn/Velkomin " + nafn;
         }
     }
 }

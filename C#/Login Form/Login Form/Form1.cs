@@ -62,7 +62,7 @@ namespace Login_Form
                     {
                         if (arr[2] == PasswordB)
                         {
-                            LoginStarfsmenn login = new LoginStarfsmenn();
+                            LoginStarfsmenn login = new LoginStarfsmenn(Notendanafn, "","halló heimur");
                             login.Show();
                         }
                     }
