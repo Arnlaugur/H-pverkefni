@@ -236,5 +236,34 @@ namespace Login_Form
                 }
                 return Faerslur;            
         }
+        public void Motd(string texti) 
+        {
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "UPDATE motd SET motd = '" + texti + "'";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                nySQLskipun.ExecuteNonQuery();
+                CloseConnection();
+            }
+        }
+        public string Motd2()
+        {
+            string Faerslur = null;
+
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "SELECT motd FROM motd";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                sqllesari = nySQLskipun.ExecuteReader();
+                while (sqllesari.Read())
+                {
+                    Faerslur = sqllesari.GetValue(0).ToString();
+                }
+                CloseConnection();
+                return Faerslur;
+            }
+            return Faerslur;
+        }
+
     }
 }

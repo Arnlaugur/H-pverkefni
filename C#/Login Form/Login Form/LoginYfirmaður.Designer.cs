@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.listView1 = new System.Windows.Forms.ListView();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelNafn = new System.Windows.Forms.Label();
             this.btSýnaStarfsmenn = new System.Windows.Forms.Button();
             this.btSýnaYfirmenn = new System.Windows.Forms.Button();
             this.btRekaStarfsmann = new System.Windows.Forms.Button();
@@ -57,14 +57,14 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // label1
+            // labelNafn
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "**";
+            this.labelNafn.AutoSize = true;
+            this.labelNafn.Location = new System.Drawing.Point(10, 9);
+            this.labelNafn.Name = "labelNafn";
+            this.labelNafn.Size = new System.Drawing.Size(15, 13);
+            this.labelNafn.TabIndex = 1;
+            this.labelNafn.Text = "**";
             // 
             // btSýnaStarfsmenn
             // 
@@ -202,11 +202,12 @@
             this.Controls.Add(this.btRekaStarfsmann);
             this.Controls.Add(this.btSýnaYfirmenn);
             this.Controls.Add(this.btSýnaStarfsmenn);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelNafn);
             this.Controls.Add(this.listView1);
             this.Name = "LoginYfirmaður";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginYfirmaður";
+            this.Load += new System.EventHandler(this.LoginYfirmaður_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,7 +216,7 @@
         #endregion
 
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelNafn;
         private System.Windows.Forms.Button btSýnaStarfsmenn;
         private System.Windows.Forms.Button btSýnaYfirmenn;
         private System.Windows.Forms.Button btRekaStarfsmann;

@@ -14,7 +14,7 @@ namespace Login_Form
     {
         string nafn = null;
         Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
-        public LoginStarfsmenn(string xnafn, string xNotandi,string texti)
+        public LoginStarfsmenn(string xnafn, string xNotandi)
         {
             InitializeComponent();
             try
@@ -45,7 +45,8 @@ namespace Login_Form
 
         private void LoginStarfsmenn_Load(object sender, EventArgs e)
         {
-            labelVelkominn.Text = "Velkominn/Velkomin " + nafn;
+            labelVelkominn.Text = "Velkomin/n " + nafn;
+            labelMotd.Text = "Motd: " + gagnagrunnur.Motd2();
         }
     }
 }
