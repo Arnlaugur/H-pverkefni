@@ -34,9 +34,12 @@ namespace Login_Form
 
         private void bt_Login_Click(object sender, EventArgs e)
         {
+            
             string Notendanafn = tb_Notendanafn.Text;
             string PasswordA = tb_Password.Text;
             string PasswordB = Encryption(PasswordA);
+
+            
 
             tb_Password.Text = PasswordB;
             List<string> linur = new List<string>();
@@ -62,7 +65,7 @@ namespace Login_Form
                     {
                         if (arr[2] == PasswordB)
                         {
-                            LoginStarfsmenn login = new LoginStarfsmenn();
+                            LoginStarfsmenn login = new LoginStarfsmenn("nafn", Notendanafn);
                             login.Show();
                         }
                     }
@@ -95,7 +98,7 @@ namespace Login_Form
                 return Convert.ToBase64String(Data);
             }
         }
-
+        
         private void bt_Virkja_Click(object sender, EventArgs e)
         {
             string Notendanafn = tb_NotendanafnVirkja.Text;
@@ -121,5 +124,6 @@ namespace Login_Form
                 MessageBox.Show("Lykkilorð ekki alveg eins");
             }
         }
+        
     }
 }
