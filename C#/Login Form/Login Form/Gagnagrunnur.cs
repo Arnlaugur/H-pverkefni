@@ -242,5 +242,27 @@ namespace Login_Form
                 return Faerslur;
 
         }
+        public void Innskra(string notendanafn)
+        {
+
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "UPDATE Starfsmenn SET Mættur = 1 WHERE notendanafn = '" + notendanafn + "';";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                nySQLskipun.ExecuteNonQuery();
+                CloseConnection();
+            }
+        }
+        public void Utskra(string notendanafn)
+        {
+
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "UPDATE Starfsmenn SET Mættur = 0 WHERE notendanafn = '" + notendanafn + "';";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                nySQLskipun.ExecuteNonQuery();
+                CloseConnection();
+            }
+        }
     }
 }

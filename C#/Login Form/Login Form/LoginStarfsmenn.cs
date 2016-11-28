@@ -38,7 +38,20 @@ namespace Login_Form
 
         private void btSkráSemMættur_Click(object sender, EventArgs e)
         {
-
+            if (btSkráSemMættur.Text == "Skrá sem mættur")
+            {
+                btSkráSemMættur.Text = "Útskrá";
+                Geymsla ds = new Geymsla();
+                string Notandi = ds.Notendanafn;
+                gagnagrunnur.Innskra(Notandi);
+            }
+            else if (btSkráSemMættur.Text == "Útskrá")
+            {
+                btSkráSemMættur.Text = "Skrá sem mættur";
+                Geymsla ds = new Geymsla();
+                string Notandi = ds.Notendanafn;
+                gagnagrunnur.Utskra(Notandi);
+            }
         }
 
         private void LoginStarfsmenn_Load(object sender, EventArgs e)
