@@ -30,12 +30,31 @@ namespace Login_Form
 
         private void btSkráSemVeikur_Click(object sender, EventArgs e)
         {
+            if ( btSkráSemVeikur.Text == "Skrá sem veikur")
+            {
+                btSkráSemVeikur.Text = "Skrá úr veikindum";
 
+                
+            }
+            else if (btSkráSemVeikur.Text == "Skrá úr veikindum")
+            {
+                btSkráSemVeikur.Text = "Skrá sem veikur";
+                
+            }
         }
 
         private void btSkráIFrí_Click(object sender, EventArgs e)
         {
-
+            if (btSkráIFrí.Text == "Skrá í frí")
+            {
+                btSkráIFrí.Text = "Srká úr fríi";
+                
+            }
+            else if (btSkráIFrí.Text == "Srká úr fríi")
+            {
+                btSkráIFrí.Text = "Skrá í frí";
+                
+            }
         }
         
         private void btSkráSemMættur_Click(object sender, EventArgs e)
@@ -44,7 +63,6 @@ namespace Login_Form
             if (btSkráSemMættur.Text == "Skrá sem mættur")
             {
                 btSkráSemMættur.Text = "Útskrá";
-
                 gagnagrunnur.Innskra(Notandi);
             }
             else if (btSkráSemMættur.Text == "Útskrá")
