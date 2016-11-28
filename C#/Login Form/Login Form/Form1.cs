@@ -39,8 +39,7 @@ namespace Login_Form
             string PasswordA = tb_Password.Text;
             string PasswordB = Encryption(PasswordA);
 
-            Geymsla ds = new Geymsla();
-            ds.Notendanafn = tb_Notendanafn.Text;
+            
 
             tb_Password.Text = PasswordB;
             List<string> linur = new List<string>();
@@ -66,7 +65,7 @@ namespace Login_Form
                     {
                         if (arr[2] == PasswordB)
                         {
-                            LoginStarfsmenn login = new LoginStarfsmenn();
+                            LoginStarfsmenn login = new LoginStarfsmenn("nafn", Notendanafn);
                             login.Show();
                         }
                     }

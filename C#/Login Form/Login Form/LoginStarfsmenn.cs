@@ -12,12 +12,14 @@ namespace Login_Form
 {
     public partial class LoginStarfsmenn : Form
     {
+        string Notandi = null;
         Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
-        public LoginStarfsmenn()
+        public LoginStarfsmenn(string xnafn ,string xNotandi)
         {
             InitializeComponent();
             try
             {
+                Notandi = xNotandi;
                 gagnagrunnur.TengingVidGagnagrunn();
             }
             catch (Exception ex)
@@ -35,21 +37,19 @@ namespace Login_Form
         {
 
         }
-
+        
         private void btSkráSemMættur_Click(object sender, EventArgs e)
         {
+            
             if (btSkráSemMættur.Text == "Skrá sem mættur")
             {
                 btSkráSemMættur.Text = "Útskrá";
-                Geymsla ds = new Geymsla();
-                string Notandi = ds.Notendanafn;
+
                 gagnagrunnur.Innskra(Notandi);
             }
             else if (btSkráSemMættur.Text == "Útskrá")
             {
                 btSkráSemMættur.Text = "Skrá sem mættur";
-                Geymsla ds = new Geymsla();
-                string Notandi = ds.Notendanafn;
                 gagnagrunnur.Utskra(Notandi);
             }
         }
