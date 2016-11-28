@@ -264,5 +264,23 @@ namespace Login_Form
                 CloseConnection();
             }
         }
+        public string mæting(string notandanafn)
+        {
+            string tala = null;
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "SELECT Mættur FROM Starfsmenn WHERE notendanafn = '" + notandanafn + "';";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                sqllesari = nySQLskipun.ExecuteReader();
+                while (sqllesari.Read())
+                {
+                    tala = sqllesari.GetValue(0).ToString();
+                }
+                CloseConnection();
+                return tala;
+            }
+            return tala;
+
+        }
     }
 }

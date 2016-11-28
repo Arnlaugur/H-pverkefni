@@ -13,10 +13,20 @@ namespace Login_Form
     public partial class LoginStarfsmenn : Form
     {
         string Notandi = null;
+        string mætting = null;
         Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
         public LoginStarfsmenn(string xnafn ,string xNotandi)
         {
             InitializeComponent();
+            mætting = gagnagrunnur.mæting(Notandi);
+            if (mætting == "0")
+            {
+                btSkráSemMættur.Text = "Skrá sem mættur";
+            }
+            else if (mætting == "1")
+            {
+                btSkráSemMættur.Text = "Útskrá";
+            }
             try
             {
                 Notandi = xNotandi;
@@ -30,11 +40,11 @@ namespace Login_Form
 
         private void btSkráSemVeikur_Click(object sender, EventArgs e)
         {
+            
             if ( btSkráSemVeikur.Text == "Skrá sem veikur")
             {
                 btSkráSemVeikur.Text = "Skrá úr veikindum";
 
-                
             }
             else if (btSkráSemVeikur.Text == "Skrá úr veikindum")
             {
