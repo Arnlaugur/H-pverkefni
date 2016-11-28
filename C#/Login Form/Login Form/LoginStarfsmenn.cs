@@ -12,10 +12,16 @@ namespace Login_Form
 {
     public partial class LoginStarfsmenn : Form
     {
+<<<<<<< HEAD
         string Notandi = null;
         string mætting = null;
         Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
         public LoginStarfsmenn(string xnafn ,string xNotandi)
+=======
+        string nafn = null;
+        Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
+        public LoginStarfsmenn(string xnafn, string xNotandi)
+>>>>>>> Vegur-Bjarki
         {
             InitializeComponent();
             mætting = gagnagrunnur.mæting(Notandi);
@@ -31,6 +37,7 @@ namespace Login_Form
             {
                 Notandi = xNotandi;
                 gagnagrunnur.TengingVidGagnagrunn();
+                nafn = xnafn;
             }
             catch (Exception ex)
             {
@@ -84,7 +91,8 @@ namespace Login_Form
 
         private void LoginStarfsmenn_Load(object sender, EventArgs e)
         {
-            labelVelkominn.Text = "Velkominn " + "";
+            labelVelkominn.Text = "Velkomin/n " + nafn;
+            labelMotd.Text = "Motd: " + gagnagrunnur.Motd2();
         }
     }
 }

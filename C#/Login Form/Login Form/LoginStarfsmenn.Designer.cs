@@ -40,7 +40,7 @@
             this.labelVelkominn.AutoSize = true;
             this.labelVelkominn.BackColor = System.Drawing.SystemColors.Control;
             this.labelVelkominn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelVelkominn.Location = new System.Drawing.Point(131, 9);
+            this.labelVelkominn.Location = new System.Drawing.Point(12, 12);
             this.labelVelkominn.Name = "labelVelkominn";
             this.labelVelkominn.Size = new System.Drawing.Size(15, 13);
             this.labelVelkominn.TabIndex = 0;
@@ -49,7 +49,7 @@
             // btSkráSemVeikur
             // 
             this.btSkráSemVeikur.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btSkráSemVeikur.Location = new System.Drawing.Point(12, 44);
+            this.btSkráSemVeikur.Location = new System.Drawing.Point(140, 123);
             this.btSkráSemVeikur.Name = "btSkráSemVeikur";
             this.btSkráSemVeikur.Size = new System.Drawing.Size(114, 33);
             this.btSkráSemVeikur.TabIndex = 1;
@@ -60,7 +60,7 @@
             // btSkráIFrí
             // 
             this.btSkráIFrí.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btSkráIFrí.Location = new System.Drawing.Point(132, 44);
+            this.btSkráIFrí.Location = new System.Drawing.Point(140, 69);
             this.btSkráIFrí.Name = "btSkráIFrí";
             this.btSkráIFrí.Size = new System.Drawing.Size(96, 33);
             this.btSkráIFrí.TabIndex = 2;
@@ -71,7 +71,11 @@
             // btSkráSemMættur
             // 
             this.btSkráSemMættur.BackColor = System.Drawing.SystemColors.ControlLight;
+<<<<<<< HEAD
             this.btSkráSemMættur.Location = new System.Drawing.Point(234, 44);
+=======
+            this.btSkráSemMættur.Location = new System.Drawing.Point(140, 12);
+>>>>>>> Vegur-Bjarki
             this.btSkráSemMættur.Name = "btSkráSemMættur";
             this.btSkráSemMættur.Size = new System.Drawing.Size(115, 33);
             this.btSkráSemMættur.TabIndex = 3;
@@ -82,7 +86,7 @@
             // labelMotd
             // 
             this.labelMotd.AutoSize = true;
-            this.labelMotd.Location = new System.Drawing.Point(12, 8);
+            this.labelMotd.Location = new System.Drawing.Point(12, 69);
             this.labelMotd.Name = "labelMotd";
             this.labelMotd.Size = new System.Drawing.Size(15, 13);
             this.labelMotd.TabIndex = 4;
@@ -93,7 +97,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(361, 89);
+            this.ClientSize = new System.Drawing.Size(248, 168);
             this.Controls.Add(this.labelMotd);
             this.Controls.Add(this.btSkráSemMættur);
             this.Controls.Add(this.btSkráIFrí);

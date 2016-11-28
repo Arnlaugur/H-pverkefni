@@ -140,7 +140,6 @@ namespace Login_Form
                 nySQLskipun.ExecuteNonQuery();
                 CloseConnection();
             }
-
         }
         public List<string> SynaStarfsmenn()
         {
@@ -168,12 +167,10 @@ namespace Login_Form
         }
 
 
-
         public string NafnaCheck(string Notendanafn)
         {
-            
             string Faerslur = null;
-            
+
             if (OpenConnection() == true)
             {
                 fyrirspurn = "SELECT email FROM Starfsmenn WHERE notendanafn = '" + Notendanafn + "'";
@@ -181,25 +178,26 @@ namespace Login_Form
                 sqllesari = nySQLskipun.ExecuteReader();
                 while (sqllesari.Read())
                 {
-                    
-                        Faerslur = sqllesari.GetValue(0).ToString();
-                        
-
+                    Faerslur = sqllesari.GetValue(0).ToString();
                 }
-                CloseConnection();
-                return Faerslur;
+                    CloseConnection();
+                    return Faerslur;
             }
-            return Faerslur;
+                return Faerslur;
         }
         public void PasswordSettInnSqlToflu(string password, string Notendanafn) //Aðferð til að setja í grunn
         {
             
             if (OpenConnection() == true)
             {
+
+                fyrirspurn = "UPDATE Starfsmenn SET password = '" + password + "' WHERE notendanafn = '" + Notendanafn + "';";
+
              fyrirspurn = "UPDATE Starfsmenn SET password = '" + password + "' WHERE notendanafn = '" + Notendanafn + "';";
              nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
              nySQLskipun.ExecuteNonQuery();
                 CloseConnection();
+
             }
         }
         public void Eyda(string nafn, string email)
@@ -213,11 +211,9 @@ namespace Login_Form
                 CloseConnection();
             }
 
-
         }
         public List<string> notandanöfn()
-        {
-            
+        {         
                 List<string> Faerslur = new List<string>();
                 string lina = null;
                 
@@ -234,14 +230,41 @@ namespace Login_Form
                         }
                         Faerslur.Add(lina);
                         lina = null;
-
                     }
                     CloseConnection();
                     return Faerslur;
                 }
-                return Faerslur;
-
+                return Faerslur;            
         }
+        public void Motd(string texti) 
+        {
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "UPDATE motd SET motd = '" + texti + "'";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                nySQLskipun.ExecuteNonQuery();
+                CloseConnection();
+            }
+        }
+        public string Motd2()
+        {
+            string Faerslur = null;
+
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "SELECT motd FROM motd";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                sqllesari = nySQLskipun.ExecuteReader();
+                while (sqllesari.Read())
+                {
+                    Faerslur = sqllesari.GetValue(0).ToString();
+                }
+                CloseConnection();
+                return Faerslur;
+            }
+            return Faerslur;
+        }
+<<<<<<< HEAD
         public void Innskra(string notendanafn)
         {
 
@@ -282,5 +305,8 @@ namespace Login_Form
             return tala;
 
         }
+=======
+
+>>>>>>> Vegur-Bjarki
     }
 }
