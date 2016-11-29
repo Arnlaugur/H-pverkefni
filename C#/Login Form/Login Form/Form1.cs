@@ -65,7 +65,11 @@ namespace Login_Form
                     {
                         if (arr[2] == PasswordB)
                         {
+<<<<<<< HEAD
                             LoginStarfsmenn login = new LoginStarfsmenn("nafn", Notendanafn);
+=======
+                            LoginStarfsmenn login = new LoginStarfsmenn(Notendanafn, "");
+>>>>>>> Vegur-Bjarki
                             login.Show();
                         }
                     }
@@ -73,7 +77,7 @@ namespace Login_Form
                     {
                         if (arr[2] == PasswordB)
                         {
-                            LoginYfirmaður login = new LoginYfirmaður();
+                            LoginYfirmaður login = new LoginYfirmaður(Notendanafn);
                             login.Show();
                         }
                     }
