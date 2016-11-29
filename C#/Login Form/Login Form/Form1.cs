@@ -65,11 +65,7 @@ namespace Login_Form
                     {
                         if (arr[2] == PasswordB)
                         {
-<<<<<<< HEAD
-                            LoginStarfsmenn login = new LoginStarfsmenn("nafn", Notendanafn);
-=======
                             LoginStarfsmenn login = new LoginStarfsmenn(Notendanafn, "");
->>>>>>> Vegur-Bjarki
                             login.Show();
                         }
                     }
@@ -91,6 +87,8 @@ namespace Login_Form
             {
                 MessageBox.Show(ex.ToString());
             }
+            tb_Notendanafn.Clear();
+            tb_Password.Clear();
         }
         //Password Encryption Kóði:
         static string Encryption(string pass)

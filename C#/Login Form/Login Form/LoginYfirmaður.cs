@@ -214,6 +214,46 @@ namespace Login_Form
             labelNafn.Text = "Velkomin/n " + nafn;
         }
 
+        private void btSkráMættur_Click(object sender, EventArgs e)
+        {
+            if (btSkráMættur.Text == "Skrá sem mættur")
+            {
+                btSkráMættur.Text = "Útskrá";
+            }
+            else if (btSkráMættur.Text == "Útskrá")
+            {
+                btSkráMættur.Text = "Skrá sem mættur";
+            }
+        }
+
+        private void btSkráVeikur_Click(object sender, EventArgs e)
+        {
+            if (btSkráVeikur.Text == "Skrá sem veikur")
+            {
+                btSkráVeikur.Text = "Skrá úr veikindum";
+
+            }
+            else if (btSkráVeikur.Text == "Skrá úr veikindum")
+            {
+                btSkráVeikur.Text = "Skrá sem veikur";
+
+            }
+        }
+
+        private void btFaraÍFrí_Click(object sender, EventArgs e)
+        {
+            if (btFaraÍFrí.Text == "Fara í frí")
+            {
+                btFaraÍFrí.Text = "Skrá úr fríi";
+
+            }
+            else if (btFaraÍFrí.Text == "Skrá úr fríi")
+            {
+                btFaraÍFrí.Text = "Fara í frí";
+
+            }
+        }
+
         
     }
 }

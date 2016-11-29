@@ -12,27 +12,14 @@ namespace Login_Form
 {
     public partial class LoginStarfsmenn : Form
     {
-<<<<<<< HEAD
         string Notandi = null;
         string mætting = null;
-        Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
-        public LoginStarfsmenn(string xnafn ,string xNotandi)
-=======
         string nafn = null;
         Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
         public LoginStarfsmenn(string xnafn, string xNotandi)
->>>>>>> Vegur-Bjarki
+
         {
             InitializeComponent();
-            mætting = gagnagrunnur.mæting(Notandi);
-            if (mætting == "0")
-            {
-                btSkráSemMættur.Text = "Skrá sem mættur";
-            }
-            else if (mætting == "1")
-            {
-                btSkráSemMættur.Text = "Útskrá";
-            }
             try
             {
                 Notandi = xNotandi;
@@ -42,6 +29,15 @@ namespace Login_Form
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+            }
+            mætting = gagnagrunnur.mæting(Notandi);
+            if (mætting == "0")
+            {
+                btSkráSemMættur.Text = "Skrá sem mættur";
+            }
+            else if (mætting == "1")
+            {
+                btSkráSemMættur.Text = "Útskrá";
             }
         }
 
@@ -64,10 +60,10 @@ namespace Login_Form
         {
             if (btSkráIFrí.Text == "Skrá í frí")
             {
-                btSkráIFrí.Text = "Srká úr fríi";
+                btSkráIFrí.Text = "Skrá úr fríi";
                 
             }
-            else if (btSkráIFrí.Text == "Srká úr fríi")
+            else if (btSkráIFrí.Text == "Skrá úr fríi")
             {
                 btSkráIFrí.Text = "Skrá í frí";
                 

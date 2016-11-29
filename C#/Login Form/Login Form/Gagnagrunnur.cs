@@ -264,7 +264,7 @@ namespace Login_Form
             }
             return Faerslur;
         }
-<<<<<<< HEAD
+
         public void Innskra(string notendanafn)
         {
 
@@ -303,10 +303,6 @@ namespace Login_Form
                 return tala;
             }
             return tala;
-
         }
-=======
-
->>>>>>> Vegur-Bjarki
     }
 }
