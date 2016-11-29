@@ -11,3 +11,4 @@ H:\Hopverkefni\C#\Login Form\Login Form\obj\Debug\Login Form.pdb
 H:\Hopverkefni\C#\Login Form\Login Form\obj\Debug\Login_Form.LoginStarfsmenn.resources
 H:\Hopverkefni\C#\Login Form\Login Form\obj\Debug\Login_Form.LoginYfirmaður.resources
 H:\Hopverkefni\C#\Login Form\Login Form\obj\Debug\Login_Form.RadaStarfsmann.resources
+H:\Hopverkefni\C#\Login Form\Login Form\obj\Debug\Login_Form.Skilaboð.resources

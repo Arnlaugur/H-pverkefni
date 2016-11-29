@@ -292,7 +292,7 @@ namespace Login_Form
             int tala = 3;
             if (OpenConnection() == true)
             {
-                fyrirspurn = "SELECT Mættur FROM Starfsmenn WHERE notendanafn = 'HauÓði';";
+                fyrirspurn = "SELECT Mættur FROM Starfsmenn WHERE notendanafn = '"+ notandanafn +"';";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 sqllesari = nySQLskipun.ExecuteReader();
                 while (sqllesari.Read())
@@ -346,6 +346,40 @@ namespace Login_Form
                 nySQLskipun.ExecuteNonQuery();
                 CloseConnection();
             }
+        }
+        public void SetjaSkilaboðÍGrunn(string skilaboð)
+        {
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "INSERT INTO Skilaboð (skilaboð) VALUES ('"+skilaboð+"')";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                nySQLskipun.ExecuteNonQuery();
+                CloseConnection();
+            }
+        }
+        public List<string> NáÍSkilaboð()
+        {
+            List<string> Faerslur = new List<string>();
+            string lina = null;
+
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "SELECT skilaboð FROM skilaboð";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                sqllesari = nySQLskipun.ExecuteReader();
+                while (sqllesari.Read())
+                {
+                    for (int i = 0; i < sqllesari.FieldCount; i++)
+                    {
+                        lina += (sqllesari.GetValue(i).ToString()) + "-";
+                    }
+                    Faerslur.Add(lina);
+                    lina = null;
+                }
+                CloseConnection();
+                return Faerslur;
+            }
+            return Faerslur;
         }
     }
 }

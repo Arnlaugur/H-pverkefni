@@ -258,8 +258,13 @@ namespace Login_Form
         }
         private void bt_Skilaboð_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             
 
+=======
+            Skilaboð Skilaboð = new Skilaboð();
+            Skilaboð.Show();
+>>>>>>> d689788b4f7a33b4b5792442ec36cb04c2a6e2af
         }
 
         
