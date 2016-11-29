@@ -269,7 +269,7 @@ namespace Login_Form
 
             if (OpenConnection() == true)
             {
-                fyrirspurn = "UPDATE Starfsmenn SET Mættur = 1 AND Veikur = 0 WHERE notendanafn = '" + notendanafn + "';";
+                fyrirspurn = "UPDATE Starfsmenn SET Mættur = 1 AND Veikur = 0 AND Frí = 0 WHERE notendanafn = '" + notendanafn + "';";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 nySQLskipun.ExecuteNonQuery();
                 CloseConnection();
@@ -311,7 +311,7 @@ namespace Login_Form
 
             if (OpenConnection() == true)
             {
-                fyrirspurn = "UPDATE Starfsmenn SET Veikur = 1 AND Mættur = 0 WHERE notendanafn = '" + notendanafn + "';";
+                fyrirspurn = "UPDATE Starfsmenn SET Veikur = 1 AND Mættur = 0 AND Frí = 0 WHERE notendanafn = '" + notendanafn + "';";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 nySQLskipun.ExecuteNonQuery();
                 CloseConnection();
@@ -332,7 +332,7 @@ namespace Login_Form
         {
             if (OpenConnection() == true)
             {
-                fyrirspurn = "UPDATE Starfsmenn SET Veikur = 1 AND Mættur = 0 WHERE notendanafn = '" + notendanafn + "';";
+                fyrirspurn = "UPDATE Starfsmenn SET Frí = 1 AND Mættur = 0 AND Veikur = 0 WHERE notendanafn = '" + notendanafn + "';";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 nySQLskipun.ExecuteNonQuery();
                 CloseConnection();
@@ -342,7 +342,7 @@ namespace Login_Form
         {
             if (OpenConnection() == true)
             {
-                fyrirspurn = "UPDATE Starfsmenn SET Veikur = 0 WHERE notendanafn = '" + notendanafn + "';";
+                fyrirspurn = "UPDATE Starfsmenn SET Frí = 0 WHERE notendanafn = '" + notendanafn + "';";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 nySQLskipun.ExecuteNonQuery();
                 CloseConnection();

@@ -61,12 +61,12 @@ namespace Login_Form
             if (btSkráIFrí.Text == "Skrá í frí")
             {
                 btSkráIFrí.Text = "Srká úr fríi";
-                
+                gagnagrunnur.FaraÍFrí(Notandi);
             }
             else if (btSkráIFrí.Text == "Srká úr fríi")
             {
                 btSkráIFrí.Text = "Skrá í frí";
-                
+                gagnagrunnur.FaraÚrFríi(Notandi);
             }
         }
         
