@@ -43,6 +43,7 @@
             this.btSýnaAlla = new System.Windows.Forms.Button();
             this.tbMotd = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.bt_Skilaboð = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView1
@@ -184,11 +185,22 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "Motd:";
             // 
+            // bt_Skilaboð
+            // 
+            this.bt_Skilaboð.Location = new System.Drawing.Point(16, 425);
+            this.bt_Skilaboð.Name = "bt_Skilaboð";
+            this.bt_Skilaboð.Size = new System.Drawing.Size(155, 23);
+            this.bt_Skilaboð.TabIndex = 15;
+            this.bt_Skilaboð.Text = "Sýna Skilaboð";
+            this.bt_Skilaboð.UseVisualStyleBackColor = true;
+            this.bt_Skilaboð.Click += new System.EventHandler(this.bt_Skilaboð_Click);
+            // 
             // LoginYfirmaður
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(797, 460);
+            this.Controls.Add(this.bt_Skilaboð);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbMotd);
             this.Controls.Add(this.btSýnaAlla);
@@ -230,5 +242,6 @@
         private System.Windows.Forms.Button btSýnaAlla;
         private System.Windows.Forms.TextBox tbMotd;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button bt_Skilaboð;
     }
 }

@@ -214,6 +214,11 @@ namespace Login_Form
             labelNafn.Text = "Velkomin/n " + nafn;
         }
 
+        private void bt_Skilaboð_Click(object sender, EventArgs e)
+        {
+            
+        }
+
         
     }
 }
