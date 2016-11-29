@@ -76,6 +76,12 @@
     <Compile Include="RadaStarfsmann.Designer.cs">
       <DependentUpon>RadaStarfsmann.cs</DependentUpon>
     </Compile>
+    <Compile Include="Skilaboð.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Skilaboð.Designer.cs">
+      <DependentUpon>Skilaboð.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +102,9 @@
     </Compile>
     <EmbeddedResource Include="RadaStarfsmann.resx">
       <DependentUpon>RadaStarfsmann.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Skilaboð.resx">
+      <DependentUpon>Skilaboð.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

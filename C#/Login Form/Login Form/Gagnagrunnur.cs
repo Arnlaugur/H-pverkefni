@@ -292,7 +292,7 @@ namespace Login_Form
             int tala = 3;
             if (OpenConnection() == true)
             {
-                fyrirspurn = "SELECT Mættur FROM Starfsmenn WHERE notendanafn = 'HauÓði';";
+                fyrirspurn = "SELECT Mættur FROM Starfsmenn WHERE notendanafn = '"+ notandanafn +"';";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 sqllesari = nySQLskipun.ExecuteReader();
                 while (sqllesari.Read())
@@ -343,6 +343,16 @@ namespace Login_Form
             if (OpenConnection() == true)
             {
                 fyrirspurn = "UPDATE Starfsmenn SET Frí = 0 WHERE notendanafn = '" + notendanafn + "';";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                nySQLskipun.ExecuteNonQuery();
+                CloseConnection();
+            }
+        }
+        public void SetjaSkilaboðÍGrunn(string skilaboð)
+        {
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "INSERT INTO Skilaboð (skilaboð) VALUES (";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 nySQLskipun.ExecuteNonQuery();
                 CloseConnection();
