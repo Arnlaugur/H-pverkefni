@@ -71,11 +71,8 @@
             // btSkráSemMættur
             // 
             this.btSkráSemMættur.BackColor = System.Drawing.SystemColors.ControlLight;
-<<<<<<< HEAD
             this.btSkráSemMættur.Location = new System.Drawing.Point(234, 44);
-=======
             this.btSkráSemMættur.Location = new System.Drawing.Point(140, 12);
->>>>>>> Vegur-Bjarki
             this.btSkráSemMættur.Name = "btSkráSemMættur";
             this.btSkráSemMættur.Size = new System.Drawing.Size(115, 33);
             this.btSkráSemMættur.TabIndex = 3;

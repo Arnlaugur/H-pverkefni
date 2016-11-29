@@ -12,16 +12,11 @@ namespace Login_Form
 {
     public partial class LoginStarfsmenn : Form
     {
-<<<<<<< HEAD
         string Notandi = null;
         string mætting = null;
         Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
-        public LoginStarfsmenn(string xnafn ,string xNotandi)
-=======
         string nafn = null;
-        Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
         public LoginStarfsmenn(string xnafn, string xNotandi)
->>>>>>> Vegur-Bjarki
         {
             InitializeComponent();
             mætting = gagnagrunnur.mæting(Notandi);
