@@ -51,7 +51,7 @@
             this.btSkráSemVeikur.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btSkráSemVeikur.Location = new System.Drawing.Point(12, 44);
             this.btSkráSemVeikur.Name = "btSkráSemVeikur";
-            this.btSkráSemVeikur.Size = new System.Drawing.Size(96, 33);
+            this.btSkráSemVeikur.Size = new System.Drawing.Size(114, 33);
             this.btSkráSemVeikur.TabIndex = 1;
             this.btSkráSemVeikur.Text = "Skrá sem veikur";
             this.btSkráSemVeikur.UseVisualStyleBackColor = false;
@@ -71,9 +71,9 @@
             // btSkráSemMættur
             // 
             this.btSkráSemMættur.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btSkráSemMættur.Location = new System.Drawing.Point(253, 44);
+            this.btSkráSemMættur.Location = new System.Drawing.Point(234, 44);
             this.btSkráSemMættur.Name = "btSkráSemMættur";
-            this.btSkráSemMættur.Size = new System.Drawing.Size(96, 33);
+            this.btSkráSemMættur.Size = new System.Drawing.Size(115, 33);
             this.btSkráSemMættur.TabIndex = 3;
             this.btSkráSemMættur.Text = "Skrá sem mættur";
             this.btSkráSemMættur.UseVisualStyleBackColor = false;

@@ -247,7 +247,7 @@ namespace Login_Form
 
             if (OpenConnection() == true)
             {
-                fyrirspurn = "UPDATE Starfsmenn SET Mættur = 1 AND SET Veikur = 0 WHERE notendanafn = '" + notendanafn + "';";
+                fyrirspurn = "UPDATE Starfsmenn SET Mættur = 1 AND Veikur = 0 WHERE notendanafn = '" + notendanafn + "';";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 nySQLskipun.ExecuteNonQuery();
                 CloseConnection();
@@ -263,6 +263,24 @@ namespace Login_Form
                 nySQLskipun.ExecuteNonQuery();
                 CloseConnection();
             }
+        }
+        public string mæting(string notandanafn)
+        {
+            string tala = null;
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "SELECT Mættur FROM Starfsmenn WHERE notendanafn = '" + notandanafn + "';";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                sqllesari = nySQLskipun.ExecuteReader();
+                while (sqllesari.Read())
+                {
+                    tala = sqllesari.GetValue(0).ToString();
+                }
+                CloseConnection();
+                return tala;
+            }
+            return tala;
+
         }
     }
 }
