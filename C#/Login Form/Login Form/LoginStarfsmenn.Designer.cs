@@ -60,7 +60,7 @@
             // btSkráIFrí
             // 
             this.btSkráIFrí.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btSkráIFrí.Location = new System.Drawing.Point(125, 86);
+            this.btSkráIFrí.Location = new System.Drawing.Point(126, 86);
             this.btSkráIFrí.Name = "btSkráIFrí";
             this.btSkráIFrí.Size = new System.Drawing.Size(96, 33);
             this.btSkráIFrí.TabIndex = 2;
@@ -71,12 +71,7 @@
             // btSkráSemMættur
             // 
             this.btSkráSemMættur.BackColor = System.Drawing.SystemColors.ControlLight;
-<<<<<<< HEAD
-            this.btSkráSemMættur.Location = new System.Drawing.Point(237, 86);
-=======
-            this.btSkráSemMættur.Location = new System.Drawing.Point(234, 44);
-            this.btSkráSemMættur.Location = new System.Drawing.Point(140, 12);
->>>>>>> master
+            this.btSkráSemMættur.Location = new System.Drawing.Point(238, 86);
             this.btSkráSemMættur.Name = "btSkráSemMættur";
             this.btSkráSemMættur.Size = new System.Drawing.Size(96, 33);
             this.btSkráSemMættur.TabIndex = 3;

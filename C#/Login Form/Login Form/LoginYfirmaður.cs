@@ -214,16 +214,18 @@ namespace Login_Form
             labelNafn.Text = "Velkomin/n " + nafn;
         }
 
-<<<<<<< HEAD
+
         private void btSkráMættur_Click(object sender, EventArgs e)
         {
             if (btSkráMættur.Text == "Skrá sem mættur")
             {
                 btSkráMættur.Text = "Útskrá";
+                gagnagrunnur.Innskra(nafn);
             }
             else if (btSkráMættur.Text == "Útskrá")
             {
                 btSkráMættur.Text = "Skrá sem mættur";
+                gagnagrunnur.Utskra(nafn);
             }
         }
 
@@ -232,12 +234,12 @@ namespace Login_Form
             if (btSkráVeikur.Text == "Skrá sem veikur")
             {
                 btSkráVeikur.Text = "Skrá úr veikindum";
-
+                gagnagrunnur.Veikur(nafn);
             }
             else if (btSkráVeikur.Text == "Skrá úr veikindum")
             {
                 btSkráVeikur.Text = "Skrá sem veikur";
-
+                gagnagrunnur.EkkiVeikur(nafn);
             }
         }
 
@@ -246,18 +248,18 @@ namespace Login_Form
             if (btFaraÍFrí.Text == "Fara í frí")
             {
                 btFaraÍFrí.Text = "Skrá úr fríi";
-
+                gagnagrunnur.FaraÍFrí(nafn);
             }
             else if (btFaraÍFrí.Text == "Skrá úr fríi")
             {
                 btFaraÍFrí.Text = "Fara í frí";
-
+                gagnagrunnur.FaraÚrFríi(nafn);
             }
-=======
+        }
         private void bt_Skilaboð_Click(object sender, EventArgs e)
         {
             
->>>>>>> master
+
         }
 
         

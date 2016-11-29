@@ -264,10 +264,6 @@ namespace Login_Form
             }
             return Faerslur;
         }
-<<<<<<< HEAD
-
-=======
->>>>>>> master
         public void Innskra(string notendanafn)
         {
 
@@ -307,12 +303,7 @@ namespace Login_Form
                 CloseConnection();
                 return geymsla;
             }
-<<<<<<< HEAD
-            return tala;
-        }
-=======
             return geymsla;
-
         }
         public void Veikur(string notendanafn)
         {
@@ -356,6 +347,5 @@ namespace Login_Form
                 CloseConnection();
             }
         }
->>>>>>> master
     }
 }
