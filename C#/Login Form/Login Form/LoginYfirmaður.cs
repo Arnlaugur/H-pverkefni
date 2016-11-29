@@ -216,7 +216,8 @@ namespace Login_Form
 
         private void bt_Skilaboð_Click(object sender, EventArgs e)
         {
-            
+            Skilaboð Skilaboð = new Skilaboð();
+            Skilaboð.Show();
         }
 
         

@@ -61,7 +61,8 @@ namespace Login_Form
             if (btSkráIFrí.Text == "Skrá í frí")
             {
                 btSkráIFrí.Text = "Srká úr fríi";
-                gagnagrunnur.FaraÍFrí(Notandi);
+                string skilaboð = Notandi + " biður um frí í dag";
+                gagnagrunnur.SetjaSkilaboðÍGrunn(skilaboð);
             }
             else if (btSkráIFrí.Text == "Srká úr fríi")
             {
