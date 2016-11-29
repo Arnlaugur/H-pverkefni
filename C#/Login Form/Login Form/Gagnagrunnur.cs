@@ -264,13 +264,12 @@ namespace Login_Form
             }
             return Faerslur;
         }
-<<<<<<< HEAD
         public void Innskra(string notendanafn)
         {
 
             if (OpenConnection() == true)
             {
-                fyrirspurn = "UPDATE Starfsmenn SET Mættur = 1 AND Veikur = 0 WHERE notendanafn = '" + notendanafn + "';";
+                fyrirspurn = "UPDATE Starfsmenn SET Mættur = 1 AND Veikur = 0 AND Frí = 0 WHERE notendanafn = '" + notendanafn + "';";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 nySQLskipun.ExecuteNonQuery();
                 CloseConnection();
@@ -289,24 +288,65 @@ namespace Login_Form
         }
         public string mæting(string notandanafn)
         {
-            string tala = null;
+            string geymsla = "3";
+            int tala = 3;
             if (OpenConnection() == true)
             {
-                fyrirspurn = "SELECT Mættur FROM Starfsmenn WHERE notendanafn = '" + notandanafn + "';";
+                fyrirspurn = "SELECT Mættur FROM Starfsmenn WHERE notendanafn = 'HauÓði';";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 sqllesari = nySQLskipun.ExecuteReader();
                 while (sqllesari.Read())
                 {
-                    tala = sqllesari.GetValue(0).ToString();
+                    tala = sqllesari.GetInt32(0);
                 }
+                geymsla = tala.ToString();
                 CloseConnection();
-                return tala;
+                return geymsla;
             }
-            return tala;
+            return geymsla;
 
         }
-=======
+        public void Veikur(string notendanafn)
+        {
 
->>>>>>> Vegur-Bjarki
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "UPDATE Starfsmenn SET Veikur = 1 AND Mættur = 0 AND Frí = 0 WHERE notendanafn = '" + notendanafn + "';";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                nySQLskipun.ExecuteNonQuery();
+                CloseConnection();
+            }
+        }
+        public void EkkiVeikur(string notendanafn)
+        {
+
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "UPDATE Starfsmenn SET Veikur = 0 WHERE notendanafn = '" + notendanafn + "';";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                nySQLskipun.ExecuteNonQuery();
+                CloseConnection();
+            }
+        }
+        public void FaraÍFrí(string notendanafn)
+        {
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "UPDATE Starfsmenn SET Frí = 1 AND Mættur = 0 AND Veikur = 0 WHERE notendanafn = '" + notendanafn + "';";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                nySQLskipun.ExecuteNonQuery();
+                CloseConnection();
+            }
+        }
+        public void FaraÚrFríi(string notendanafn)
+        {
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "UPDATE Starfsmenn SET Frí = 0 WHERE notendanafn = '" + notendanafn + "';";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                nySQLskipun.ExecuteNonQuery();
+                CloseConnection();
+            }
+        }
     }
 }

@@ -12,27 +12,14 @@ namespace Login_Form
 {
     public partial class LoginStarfsmenn : Form
     {
-<<<<<<< HEAD
         string Notandi = null;
         string mætting = null;
         Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
-        public LoginStarfsmenn(string xnafn ,string xNotandi)
-=======
         string nafn = null;
-        Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
         public LoginStarfsmenn(string xnafn, string xNotandi)
->>>>>>> Vegur-Bjarki
         {
             InitializeComponent();
-            mætting = gagnagrunnur.mæting(Notandi);
-            if (mætting == "0")
-            {
-                btSkráSemMættur.Text = "Skrá sem mættur";
-            }
-            else if (mætting == "1")
-            {
-                btSkráSemMættur.Text = "Útskrá";
-            }
+            
             try
             {
                 Notandi = xNotandi;
@@ -43,6 +30,15 @@ namespace Login_Form
             {
                 MessageBox.Show(ex.ToString());
             }
+            mætting = gagnagrunnur.mæting(Notandi);
+            if (mætting == "0")
+            {
+                btSkráSemMættur.Text = "Skrá sem mættur";
+            }
+            else if (mætting == "1")
+            {
+                btSkráSemMættur.Text = "Útskrá";
+            }
         }
 
         private void btSkráSemVeikur_Click(object sender, EventArgs e)
@@ -51,12 +47,12 @@ namespace Login_Form
             if ( btSkráSemVeikur.Text == "Skrá sem veikur")
             {
                 btSkráSemVeikur.Text = "Skrá úr veikindum";
-
+                gagnagrunnur.Veikur(Notandi);
             }
             else if (btSkráSemVeikur.Text == "Skrá úr veikindum")
             {
                 btSkráSemVeikur.Text = "Skrá sem veikur";
-                
+                gagnagrunnur.EkkiVeikur(Notandi);
             }
         }
 
@@ -65,12 +61,12 @@ namespace Login_Form
             if (btSkráIFrí.Text == "Skrá í frí")
             {
                 btSkráIFrí.Text = "Srká úr fríi";
-                
+                gagnagrunnur.FaraÍFrí(Notandi);
             }
             else if (btSkráIFrí.Text == "Srká úr fríi")
             {
                 btSkráIFrí.Text = "Skrá í frí";
-                
+                gagnagrunnur.FaraÚrFríi(Notandi);
             }
         }
         
