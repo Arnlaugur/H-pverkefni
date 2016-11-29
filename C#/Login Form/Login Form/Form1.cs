@@ -65,7 +65,11 @@ namespace Login_Form
                     {
                         if (arr[2] == PasswordB)
                         {
+<<<<<<< HEAD
                             LoginStarfsmenn login = new LoginStarfsmenn(Notendanafn, "");
+=======
+                            LoginStarfsmenn login = new LoginStarfsmenn("nafn", Notendanafn);
+>>>>>>> master
                             login.Show();
                         }
                     }

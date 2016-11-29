@@ -14,12 +14,21 @@ namespace Login_Form
     {
         string Notandi = null;
         string mætting = null;
-        string nafn = null;
+<<<<<<< HEAD
+=======
         Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
+>>>>>>> master
+        string nafn = null;
         public LoginStarfsmenn(string xnafn, string xNotandi)
+<<<<<<< HEAD
 
         {
             InitializeComponent();
+=======
+        {
+            InitializeComponent();
+            
+>>>>>>> master
             try
             {
                 Notandi = xNotandi;
@@ -47,12 +56,12 @@ namespace Login_Form
             if ( btSkráSemVeikur.Text == "Skrá sem veikur")
             {
                 btSkráSemVeikur.Text = "Skrá úr veikindum";
-
+                gagnagrunnur.Veikur(Notandi);
             }
             else if (btSkráSemVeikur.Text == "Skrá úr veikindum")
             {
                 btSkráSemVeikur.Text = "Skrá sem veikur";
-                
+                gagnagrunnur.EkkiVeikur(Notandi);
             }
         }
 
@@ -60,13 +69,18 @@ namespace Login_Form
         {
             if (btSkráIFrí.Text == "Skrá í frí")
             {
+<<<<<<< HEAD
                 btSkráIFrí.Text = "Skrá úr fríi";
                 
+=======
+                btSkráIFrí.Text = "Srká úr fríi";
+                gagnagrunnur.FaraÍFrí(Notandi);
+>>>>>>> master
             }
             else if (btSkráIFrí.Text == "Skrá úr fríi")
             {
                 btSkráIFrí.Text = "Skrá í frí";
-                
+                gagnagrunnur.FaraÚrFríi(Notandi);
             }
         }
         

@@ -43,9 +43,13 @@
             this.btSýnaAlla = new System.Windows.Forms.Button();
             this.tbMotd = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.btSkráMættur = new System.Windows.Forms.Button();
             this.btSkráVeikur = new System.Windows.Forms.Button();
             this.btFaraÍFrí = new System.Windows.Forms.Button();
+=======
+            this.bt_Skilaboð = new System.Windows.Forms.Button();
+>>>>>>> master
             this.SuspendLayout();
             // 
             // listView1
@@ -187,6 +191,7 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "Motd:";
             // 
+<<<<<<< HEAD
             // btSkráMættur
             // 
             this.btSkráMættur.Location = new System.Drawing.Point(16, 38);
@@ -216,15 +221,30 @@
             this.btFaraÍFrí.Text = "Fara í frí";
             this.btFaraÍFrí.UseVisualStyleBackColor = true;
             this.btFaraÍFrí.Click += new System.EventHandler(this.btFaraÍFrí_Click);
+=======
+            // bt_Skilaboð
+            // 
+            this.bt_Skilaboð.Location = new System.Drawing.Point(16, 425);
+            this.bt_Skilaboð.Name = "bt_Skilaboð";
+            this.bt_Skilaboð.Size = new System.Drawing.Size(155, 23);
+            this.bt_Skilaboð.TabIndex = 15;
+            this.bt_Skilaboð.Text = "Sýna Skilaboð";
+            this.bt_Skilaboð.UseVisualStyleBackColor = true;
+            this.bt_Skilaboð.Click += new System.EventHandler(this.bt_Skilaboð_Click);
+>>>>>>> master
             // 
             // LoginYfirmaður
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(797, 460);
+<<<<<<< HEAD
             this.Controls.Add(this.btFaraÍFrí);
             this.Controls.Add(this.btSkráVeikur);
             this.Controls.Add(this.btSkráMættur);
+=======
+            this.Controls.Add(this.bt_Skilaboð);
+>>>>>>> master
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbMotd);
             this.Controls.Add(this.btSýnaAlla);
@@ -266,8 +286,12 @@
         private System.Windows.Forms.Button btSýnaAlla;
         private System.Windows.Forms.TextBox tbMotd;
         private System.Windows.Forms.Label label4;
+<<<<<<< HEAD
         private System.Windows.Forms.Button btSkráMættur;
         private System.Windows.Forms.Button btSkráVeikur;
         private System.Windows.Forms.Button btFaraÍFrí;
+=======
+        private System.Windows.Forms.Button bt_Skilaboð;
+>>>>>>> master
     }
 }

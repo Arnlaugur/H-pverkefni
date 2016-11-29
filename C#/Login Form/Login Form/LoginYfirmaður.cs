@@ -214,6 +214,7 @@ namespace Login_Form
             labelNafn.Text = "Velkomin/n " + nafn;
         }
 
+<<<<<<< HEAD
         private void btSkráMættur_Click(object sender, EventArgs e)
         {
             if (btSkráMættur.Text == "Skrá sem mættur")
@@ -252,6 +253,11 @@ namespace Login_Form
                 btFaraÍFrí.Text = "Fara í frí";
 
             }
+=======
+        private void bt_Skilaboð_Click(object sender, EventArgs e)
+        {
+            
+>>>>>>> master
         }
 
         

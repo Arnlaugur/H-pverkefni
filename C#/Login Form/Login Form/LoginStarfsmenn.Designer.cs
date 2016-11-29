@@ -71,7 +71,12 @@
             // btSkráSemMættur
             // 
             this.btSkráSemMættur.BackColor = System.Drawing.SystemColors.ControlLight;
+<<<<<<< HEAD
             this.btSkráSemMættur.Location = new System.Drawing.Point(237, 86);
+=======
+            this.btSkráSemMættur.Location = new System.Drawing.Point(234, 44);
+            this.btSkráSemMættur.Location = new System.Drawing.Point(140, 12);
+>>>>>>> master
             this.btSkráSemMættur.Name = "btSkráSemMættur";
             this.btSkráSemMættur.Size = new System.Drawing.Size(96, 33);
             this.btSkráSemMættur.TabIndex = 3;
