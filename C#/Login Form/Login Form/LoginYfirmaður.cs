@@ -12,13 +12,15 @@ namespace Login_Form
 {
     public partial class LoginYfirmaður : Form
     {
+        string nafn = null;
         Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
-        public LoginYfirmaður()
+        public LoginYfirmaður(string xnafn)
         {
             InitializeComponent();
             try
             {
                 gagnagrunnur.TengingVidGagnagrunn();
+                nafn = xnafn;
             }
             catch (Exception ex)
             {
@@ -202,8 +204,14 @@ namespace Login_Form
         private void btMotd_Click(object sender, EventArgs e)
         {
             string motd = tbMotd.Text;
+            gagnagrunnur.Motd(motd);
             MessageBox.Show("==============\nMessage of the day:\n==============\n" + motd);
             tbMotd.Clear();
+        }
+
+        private void LoginYfirmaður_Load(object sender, EventArgs e)
+        {
+            labelNafn.Text = "Velkomin/n " + nafn;
         }
 
         
