@@ -18,5 +18,10 @@ namespace Login_Form
             InitializeComponent();
             //rtb_Skilaboð.Text +=;
         }
+
+        private void bt_fri_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
