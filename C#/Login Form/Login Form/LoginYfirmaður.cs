@@ -27,6 +27,13 @@ namespace Login_Form
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        /*
+         ====================================== 
+                     btSýnaAlla_Click:
+         Sýnir alla sem eru í gagnagrunninum okkar
+         ======================================
+        */
         private void btSýnaAlla_Click(object sender, EventArgs e)
         {
             listView1.Columns.Clear();
@@ -76,6 +83,12 @@ namespace Login_Form
             }
         }
 
+        /*
+         ====================================== 
+                     btSýnaYfirmenn_Click:
+         Sýnir alla yfirmennina í gagnagrunninn
+         ======================================
+        */
         private void btSýnaYfirmenn_Click(object sender, EventArgs e)
         {
             listView1.Columns.Clear();
@@ -124,12 +137,25 @@ namespace Login_Form
                 MessageBox.Show("villa: " + ex);
             }
         }
+
+        /*
+         ====================================== 
+                    bt_Ráða_Click:
+         Opnar RadaStarfsmann.cs
+         ======================================
+        */
         private void bt_Ráða_Click(object sender, EventArgs e)
         {
             RadaStarfsmann Raða = new RadaStarfsmann();
             Raða.Show();
         }
 
+        /*
+         ====================================== 
+                    btSýnaStarfsmenn_Click:
+         Sýnir alla starfsmenn í gagnagrunninn
+         ======================================
+        */
         private void btSýnaStarfsmenn_Click(object sender, EventArgs e)
         {
             listView1.Columns.Clear();
@@ -179,6 +205,13 @@ namespace Login_Form
             }
         }
 
+        /*
+         ====================================== 
+                    btRekaStarfsmann_Click:
+         Leyfir yfirmann að reka starfsmann með
+         því að skrifa notendanafn og email þeirra 
+         ======================================
+        */
         private void btRekaStarfsmann_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
@@ -196,11 +229,13 @@ namespace Login_Form
             tbRekaEmail.Clear();
         }
 
-        private void btSendaIFrí_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        /*
+         ====================================== 
+                     btMotd_Click:
+         Yfirmaður getur skrifað einhverja skilaboð 
+         til allra 
+         ======================================
+        */
         private void btMotd_Click(object sender, EventArgs e)
         {
             string motd = tbMotd.Text;
@@ -209,12 +244,25 @@ namespace Login_Form
             tbMotd.Clear();
         }
 
+        /*
+         ====================================== 
+                    LoginYfirmaður_Load:
+         Þegar LoginYfirmaður load-ar þá heilsar
+         forritið þann yfirmann sem loggaði sig inn 
+         ======================================
+        */
         private void LoginYfirmaður_Load(object sender, EventArgs e)
         {
             labelNafn.Text = "Velkomin/n " + nafn;
         }
 
-
+        /*
+         ====================================== 
+                    btSkráMættur_Click:
+         Yfirmaður verður skráður sem 'mættur'
+         ef ýtt er á þennan takka
+         ======================================
+        */
         private void btSkráMættur_Click(object sender, EventArgs e)
         {
             if (btSkráMættur.Text == "Skrá sem mættur")
@@ -229,6 +277,13 @@ namespace Login_Form
             }
         }
 
+        /*
+         ====================================== 
+                    btSkráVeikur_Click:
+         Yfirmaður verður skráður sem 'veikur'
+         ef ýtt er á þennan takka
+         ======================================
+        */
         private void btSkráVeikur_Click(object sender, EventArgs e)
         {
             if (btSkráVeikur.Text == "Skrá sem veikur")
@@ -243,6 +298,13 @@ namespace Login_Form
             }
         }
 
+        /*
+         ====================================== 
+                    btFaraÍFrí_Click:
+         Yfirmaður verður settur í frí ef ýtt
+         er á þennan takka
+         ======================================
+        */
         private void btFaraÍFrí_Click(object sender, EventArgs e)
         {
             if (btFaraÍFrí.Text == "Fara í frí")
@@ -261,7 +323,5 @@ namespace Login_Form
             
 
         }
-
-        
     }
 }

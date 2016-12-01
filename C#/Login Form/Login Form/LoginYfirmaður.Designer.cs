@@ -38,7 +38,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.bt_Ráða = new System.Windows.Forms.Button();
-            this.btSendaIFrí = new System.Windows.Forms.Button();
             this.btMotd = new System.Windows.Forms.Button();
             this.btSýnaAlla = new System.Windows.Forms.Button();
             this.tbMotd = new System.Windows.Forms.TextBox();
@@ -72,7 +71,7 @@
             // 
             // btSýnaStarfsmenn
             // 
-            this.btSýnaStarfsmenn.Location = new System.Drawing.Point(10, 167);
+            this.btSýnaStarfsmenn.Location = new System.Drawing.Point(12, 196);
             this.btSýnaStarfsmenn.Name = "btSýnaStarfsmenn";
             this.btSýnaStarfsmenn.Size = new System.Drawing.Size(158, 23);
             this.btSýnaStarfsmenn.TabIndex = 2;
@@ -82,7 +81,7 @@
             // 
             // btSýnaYfirmenn
             // 
-            this.btSýnaYfirmenn.Location = new System.Drawing.Point(10, 196);
+            this.btSýnaYfirmenn.Location = new System.Drawing.Point(12, 225);
             this.btSýnaYfirmenn.Name = "btSýnaYfirmenn";
             this.btSýnaYfirmenn.Size = new System.Drawing.Size(158, 23);
             this.btSýnaYfirmenn.TabIndex = 3;
@@ -92,7 +91,7 @@
             // 
             // btRekaStarfsmann
             // 
-            this.btRekaStarfsmann.Location = new System.Drawing.Point(10, 254);
+            this.btRekaStarfsmann.Location = new System.Drawing.Point(12, 283);
             this.btRekaStarfsmann.Name = "btRekaStarfsmann";
             this.btRekaStarfsmann.Size = new System.Drawing.Size(158, 23);
             this.btRekaStarfsmann.TabIndex = 4;
@@ -102,14 +101,14 @@
             // 
             // tbRekaNafn
             // 
-            this.tbRekaNafn.Location = new System.Drawing.Point(88, 283);
+            this.tbRekaNafn.Location = new System.Drawing.Point(90, 312);
             this.tbRekaNafn.Name = "tbRekaNafn";
             this.tbRekaNafn.Size = new System.Drawing.Size(80, 20);
             this.tbRekaNafn.TabIndex = 5;
             // 
             // tbRekaEmail
             // 
-            this.tbRekaEmail.Location = new System.Drawing.Point(50, 309);
+            this.tbRekaEmail.Location = new System.Drawing.Point(52, 338);
             this.tbRekaEmail.Name = "tbRekaEmail";
             this.tbRekaEmail.Size = new System.Drawing.Size(118, 20);
             this.tbRekaEmail.TabIndex = 6;
@@ -117,7 +116,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 286);
+            this.label2.Location = new System.Drawing.Point(12, 315);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 7;
@@ -126,7 +125,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 312);
+            this.label3.Location = new System.Drawing.Point(12, 341);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 8;
@@ -134,7 +133,7 @@
             // 
             // bt_Ráða
             // 
-            this.bt_Ráða.Location = new System.Drawing.Point(10, 225);
+            this.bt_Ráða.Location = new System.Drawing.Point(12, 254);
             this.bt_Ráða.Name = "bt_Ráða";
             this.bt_Ráða.Size = new System.Drawing.Size(158, 23);
             this.bt_Ráða.TabIndex = 9;
@@ -142,19 +141,9 @@
             this.bt_Ráða.UseVisualStyleBackColor = true;
             this.bt_Ráða.Click += new System.EventHandler(this.bt_Ráða_Click);
             // 
-            // btSendaIFrí
-            // 
-            this.btSendaIFrí.Location = new System.Drawing.Point(10, 335);
-            this.btSendaIFrí.Name = "btSendaIFrí";
-            this.btSendaIFrí.Size = new System.Drawing.Size(158, 23);
-            this.btSendaIFrí.TabIndex = 10;
-            this.btSendaIFrí.Text = "Senda í frí";
-            this.btSendaIFrí.UseVisualStyleBackColor = true;
-            this.btSendaIFrí.Click += new System.EventHandler(this.btSendaIFrí_Click);
-            // 
             // btMotd
             // 
-            this.btMotd.Location = new System.Drawing.Point(11, 364);
+            this.btMotd.Location = new System.Drawing.Point(13, 364);
             this.btMotd.Name = "btMotd";
             this.btMotd.Size = new System.Drawing.Size(157, 23);
             this.btMotd.TabIndex = 11;
@@ -164,7 +153,7 @@
             // 
             // btSýnaAlla
             // 
-            this.btSýnaAlla.Location = new System.Drawing.Point(10, 138);
+            this.btSýnaAlla.Location = new System.Drawing.Point(12, 167);
             this.btSýnaAlla.Name = "btSýnaAlla";
             this.btSýnaAlla.Size = new System.Drawing.Size(158, 23);
             this.btSýnaAlla.TabIndex = 12;
@@ -174,7 +163,7 @@
             // 
             // tbMotd
             // 
-            this.tbMotd.Location = new System.Drawing.Point(47, 398);
+            this.tbMotd.Location = new System.Drawing.Point(49, 398);
             this.tbMotd.Name = "tbMotd";
             this.tbMotd.Size = new System.Drawing.Size(118, 20);
             this.tbMotd.TabIndex = 13;
@@ -182,7 +171,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 401);
+            this.label4.Location = new System.Drawing.Point(9, 401);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 13);
             this.label4.TabIndex = 14;
@@ -190,7 +179,7 @@
             // 
             // btSkráMættur
             // 
-            this.btSkráMættur.Location = new System.Drawing.Point(10, 38);
+            this.btSkráMættur.Location = new System.Drawing.Point(12, 67);
             this.btSkráMættur.Name = "btSkráMættur";
             this.btSkráMættur.Size = new System.Drawing.Size(158, 23);
             this.btSkráMættur.TabIndex = 15;
@@ -200,7 +189,7 @@
             // 
             // btSkráVeikur
             // 
-            this.btSkráVeikur.Location = new System.Drawing.Point(10, 67);
+            this.btSkráVeikur.Location = new System.Drawing.Point(12, 96);
             this.btSkráVeikur.Name = "btSkráVeikur";
             this.btSkráVeikur.Size = new System.Drawing.Size(158, 23);
             this.btSkráVeikur.TabIndex = 16;
@@ -210,7 +199,7 @@
             // 
             // btFaraÍFrí
             // 
-            this.btFaraÍFrí.Location = new System.Drawing.Point(10, 96);
+            this.btFaraÍFrí.Location = new System.Drawing.Point(12, 125);
             this.btFaraÍFrí.Name = "btFaraÍFrí";
             this.btFaraÍFrí.Size = new System.Drawing.Size(158, 23);
             this.btFaraÍFrí.TabIndex = 17;
@@ -220,7 +209,7 @@
             // 
             // bt_Skilaboð
             // 
-            this.bt_Skilaboð.Location = new System.Drawing.Point(11, 424);
+            this.bt_Skilaboð.Location = new System.Drawing.Point(13, 424);
             this.bt_Skilaboð.Name = "bt_Skilaboð";
             this.bt_Skilaboð.Size = new System.Drawing.Size(155, 23);
             this.bt_Skilaboð.TabIndex = 15;
@@ -241,7 +230,6 @@
             this.Controls.Add(this.tbMotd);
             this.Controls.Add(this.btSýnaAlla);
             this.Controls.Add(this.btMotd);
-            this.Controls.Add(this.btSendaIFrí);
             this.Controls.Add(this.bt_Ráða);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -273,7 +261,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button bt_Ráða;
-        private System.Windows.Forms.Button btSendaIFrí;
         private System.Windows.Forms.Button btMotd;
         private System.Windows.Forms.Button btSýnaAlla;
         private System.Windows.Forms.TextBox tbMotd;

@@ -57,8 +57,7 @@ namespace Login_Form
         public List<string> LoginCheck(string Notendanafn)
         {
             List<string> Faerslur = new List<string>();
-            string lina = null;
-            
+            string lina = null;          
             if (OpenConnection() == true)
             {
                 fyrirspurn = "SELECT hlutverk, notendanafn, password FROM Starfsmenn WHERE notendanafn = '"+ Notendanafn +"'";
@@ -72,7 +71,6 @@ namespace Login_Form
                     }
                     Faerslur.Add(lina);
                     lina = null;
-
                 }
                 CloseConnection();
                 return Faerslur;
@@ -97,7 +95,6 @@ namespace Login_Form
                     }
                     Faerslur.Add(lina);
                     lina = null;
-
                 }
                 CloseConnection();
                 return Faerslur;
@@ -121,7 +118,6 @@ namespace Login_Form
                     }
                     Faerslur.Add(lina);
                     lina = null;
-
                 }
                 CloseConnection();
                 return Faerslur;
@@ -158,7 +154,6 @@ namespace Login_Form
                     }
                     Faerslur.Add(lina);
                     lina = null;
-
                 }
                 CloseConnection();
                 return Faerslur;
@@ -170,7 +165,6 @@ namespace Login_Form
         public string NafnaCheck(string Notendanafn)
         {
             string Faerslur = null;
-
             if (OpenConnection() == true)
             {
                 fyrirspurn = "SELECT email FROM Starfsmenn WHERE notendanafn = '" + Notendanafn + "'";
@@ -180,29 +174,23 @@ namespace Login_Form
                 {
                     Faerslur = sqllesari.GetValue(0).ToString();
                 }
-                    CloseConnection();
-                    return Faerslur;
-            }
+                CloseConnection();
                 return Faerslur;
+            }
+            return Faerslur;
         }
         public void PasswordSettInnSqlToflu(string password, string Notendanafn) //Aðferð til að setja í grunn
-        {
-            
+        {          
             if (OpenConnection() == true)
-            {
-
+            {            
                 fyrirspurn = "UPDATE Starfsmenn SET password = '" + password + "' WHERE notendanafn = '" + Notendanafn + "';";
-
-             fyrirspurn = "UPDATE Starfsmenn SET password = '" + password + "' WHERE notendanafn = '" + Notendanafn + "';";
-             nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
-             nySQLskipun.ExecuteNonQuery();
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                nySQLskipun.ExecuteNonQuery();
                 CloseConnection();
-
             }
         }
         public void Eyda(string nafn, string email)
-        {
-            
+        {           
             if (OpenConnection() == true)
             {
                 fyrirspurn = "Delete FROM starfsmenn where Notendanafn='" + nafn + "'" + " AND Email='" + email + "'";
@@ -210,13 +198,11 @@ namespace Login_Form
                 nySQLskipun.ExecuteNonQuery();
                 CloseConnection();
             }
-
         }
         public List<string> notandanöfn()
         {         
                 List<string> Faerslur = new List<string>();
-                string lina = null;
-                
+                string lina = null;               
                 if (OpenConnection() == true)
                 {
                     fyrirspurn = "SELECT Nafn FROM Starfsmenn";
@@ -266,7 +252,6 @@ namespace Login_Form
         }
         public void Innskra(string notendanafn)
         {
-
             if (OpenConnection() == true)
             {
                 fyrirspurn = "UPDATE Starfsmenn SET Mættur = 1 AND Veikur = 0 AND Frí = 0 WHERE notendanafn = '" + notendanafn + "';";
@@ -277,7 +262,6 @@ namespace Login_Form
         }
         public void Utskra(string notendanafn)
         {
-
             if (OpenConnection() == true)
             {
                 fyrirspurn = "UPDATE Starfsmenn SET Mættur = 0 WHERE notendanafn = '" + notendanafn + "';";
@@ -307,7 +291,6 @@ namespace Login_Form
         }
         public void Veikur(string notendanafn)
         {
-
             if (OpenConnection() == true)
             {
                 fyrirspurn = "UPDATE Starfsmenn SET Veikur = 1 AND Mættur = 0 AND Frí = 0 WHERE notendanafn = '" + notendanafn + "';";
@@ -318,7 +301,6 @@ namespace Login_Form
         }
         public void EkkiVeikur(string notendanafn)
         {
-
             if (OpenConnection() == true)
             {
                 fyrirspurn = "UPDATE Starfsmenn SET Veikur = 0 WHERE notendanafn = '" + notendanafn + "';";
