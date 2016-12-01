@@ -214,10 +214,57 @@ namespace Login_Form
             labelNafn.Text = "Velkomin/n " + nafn;
         }
 
+
+        private void btSkráMættur_Click(object sender, EventArgs e)
+        {
+            if (btSkráMættur.Text == "Skrá sem mættur")
+            {
+                btSkráMættur.Text = "Útskrá";
+                gagnagrunnur.Innskra(nafn);
+            }
+            else if (btSkráMættur.Text == "Útskrá")
+            {
+                btSkráMættur.Text = "Skrá sem mættur";
+                gagnagrunnur.Utskra(nafn);
+            }
+        }
+
+        private void btSkráVeikur_Click(object sender, EventArgs e)
+        {
+            if (btSkráVeikur.Text == "Skrá sem veikur")
+            {
+                btSkráVeikur.Text = "Skrá úr veikindum";
+                gagnagrunnur.Veikur(nafn);
+            }
+            else if (btSkráVeikur.Text == "Skrá úr veikindum")
+            {
+                btSkráVeikur.Text = "Skrá sem veikur";
+                gagnagrunnur.EkkiVeikur(nafn);
+            }
+        }
+
+        private void btFaraÍFrí_Click(object sender, EventArgs e)
+        {
+            if (btFaraÍFrí.Text == "Fara í frí")
+            {
+                btFaraÍFrí.Text = "Skrá úr fríi";
+                gagnagrunnur.FaraÍFrí(nafn);
+            }
+            else if (btFaraÍFrí.Text == "Skrá úr fríi")
+            {
+                btFaraÍFrí.Text = "Fara í frí";
+                gagnagrunnur.FaraÚrFríi(nafn);
+            }
+        }
         private void bt_Skilaboð_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+            
+
+=======
             Skilaboð Skilaboð = new Skilaboð();
             Skilaboð.Show();
+>>>>>>> d689788b4f7a33b4b5792442ec36cb04c2a6e2af
         }
 
         

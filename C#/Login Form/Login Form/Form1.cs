@@ -88,6 +88,8 @@ namespace Login_Form
             {
                 MessageBox.Show(ex.ToString());
             }
+            tb_Notendanafn.Clear();
+            tb_Password.Clear();
         }
         //Password Encryption Kóði:
         static string Encryption(string pass)

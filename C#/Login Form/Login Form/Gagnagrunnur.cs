@@ -304,7 +304,6 @@ namespace Login_Form
                 return geymsla;
             }
             return geymsla;
-
         }
         public void Veikur(string notendanafn)
         {

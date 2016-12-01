@@ -19,7 +19,6 @@ namespace Login_Form
         public LoginStarfsmenn(string xNotandi, string xnafn)
         {
             InitializeComponent();
-            
             try
             {
                 Notandi = xNotandi;
@@ -40,7 +39,6 @@ namespace Login_Form
                 btSkráSemMættur.Text = "Útskrá";
             }
         }
-
         private void btSkráSemVeikur_Click(object sender, EventArgs e)
         {
             
@@ -60,11 +58,16 @@ namespace Login_Form
         {
             if (btSkráIFrí.Text == "Skrá í frí")
             {
+<<<<<<< HEAD
+                btSkráIFrí.Text = "Skrá úr fríi";
+                gagnagrunnur.FaraÍFrí(Notandi);
+=======
                 btSkráIFrí.Text = "Srká úr fríi";
                 string skilaboð = Notandi + " biður um frí í dag";
                 gagnagrunnur.SetjaSkilaboðÍGrunn(skilaboð);
+>>>>>>> d689788b4f7a33b4b5792442ec36cb04c2a6e2af
             }
-            else if (btSkráIFrí.Text == "Srká úr fríi")
+            else if (btSkráIFrí.Text == "Skrá úr fríi")
             {
                 btSkráIFrí.Text = "Skrá í frí";
                 gagnagrunnur.FaraÚrFríi(Notandi);
