@@ -57,30 +57,30 @@ namespace Login_Form
                     string Hlutverk = linaUrLista[0];
                     string NotendanafnB = linaUrLista[1];
                     string PasswordC = linaUrLista[2];
-                    
-                    arr[0] = Hlutverk;
-                    arr[1] = NotendanafnB;
-                    arr[2] = PasswordC;
                     if (Hlutverk == "Starfsmaður")
                     {
-                        if (arr[2] == PasswordB)
+                        if (PasswordC == PasswordB)
                         {
-                            LoginStarfsmenn login = new LoginStarfsmenn("nafn", Notendanafn);
+                            LoginStarfsmenn login = new LoginStarfsmenn(Notendanafn, "");
                             login.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Lykilorð passar ekki, reyndu aftur");
                         }
                     }
                     else if (Hlutverk == "Yfirmaður")
                     {
-                        if (arr[2] == PasswordB)
+                        if (PasswordC == PasswordB)
                         {
                             LoginYfirmaður login = new LoginYfirmaður(Notendanafn);
                             login.Show();
                         }
+                        else
+                        {
+                            MessageBox.Show("Lykilorð passar ekki, reyndu aftur");
+                        }
                     }
-                    
-
-                    itm = new ListViewItem(arr);
-                    
                 }
             }
             catch (Exception ex)

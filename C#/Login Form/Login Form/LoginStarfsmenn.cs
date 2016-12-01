@@ -16,7 +16,7 @@ namespace Login_Form
         string mætting = null;
         Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
         string nafn = null;
-        public LoginStarfsmenn(string xnafn, string xNotandi)
+        public LoginStarfsmenn(string xNotandi, string xnafn)
         {
             InitializeComponent();
             
