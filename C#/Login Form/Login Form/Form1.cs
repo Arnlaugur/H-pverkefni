@@ -38,7 +38,10 @@ namespace Login_Form
             string Notendanafn = tb_Notendanafn.Text;
             string PasswordA = tb_Password.Text;
             string PasswordB = Encryption(PasswordA);
-
+            if (Notendanafn.Count() > 6)
+            {
+                MessageBox.Show("Notendanafn of langt");
+            }
             
 
             tb_Password.Text = PasswordB;
@@ -50,13 +53,16 @@ namespace Login_Form
             
             try
             {
+                
                 linur = gagnagrunnur.LoginCheck(Notendanafn);
+                
                 foreach (string lin in linur)
                 {
                     string[] linaUrLista = lin.Split('-');
                     string Hlutverk = linaUrLista[0];
                     string NotendanafnB = linaUrLista[1];
                     string PasswordC = linaUrLista[2];
+                    
                     if (Hlutverk == "Starfsmaður")
                     {
                         if (PasswordC == PasswordB)
