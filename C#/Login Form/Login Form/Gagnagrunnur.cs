@@ -54,6 +54,14 @@ namespace Login_Form
                 throw ex;
             }
         }
+        /*
+         ====================================== 
+                     LoginCheck():
+         Notað: --> Form1.cs <--
+         Upplýsingar: Athugar hvort notendanafnið
+         sé rétt
+         ======================================
+        */
         public List<string> LoginCheck(string Notendanafn)
         {
             List<string> Faerslur = new List<string>();
@@ -77,7 +85,15 @@ namespace Login_Form
             }
             return Faerslur;
         }
-
+        /*
+         ====================================== 
+                     SynaYfirmenn():
+         Notað: --> LoginYfirmaður.cs <--
+         Upplýsingar: Sýnir alla yfirmenn með því
+         að select-a allt úr töflunni 'starfsmenn'
+         þar sem Hlutverk = 'Yfirmaður'
+         ======================================
+        */
         public List<string> SynaYfirmenn()
         {
             List<string> Faerslur = new List<string>();
@@ -101,6 +117,14 @@ namespace Login_Form
             }
             return Faerslur;
         }
+        /*
+         ====================================== 
+                     SynaAlla():
+         Notað: --> LoginYfirmaður.cs <--
+         Upplýsingar: Select-ar allt úr töflunni
+         'starfsmenn'
+         ======================================
+        */
         public List<string> SynaAlla()
         {
             List<string> Faerslur = new List<string>();
@@ -124,6 +148,14 @@ namespace Login_Form
             }
             return Faerslur;
         }
+        /*
+         ====================================== 
+                     SettInnSqlToflu():
+         Notað: --> RadaStarfsmann.cs <--
+         Upplýsingar: Bættir nýjum gögnum við 
+         töfluna 'starfsmaður'
+         ======================================
+        */
         public void SettInnSqlToflu(string nafn, string sími, string email, string hlutverk, string notendanafn) //Aðferð til að setja í grunn
         {
             if (OpenConnection() == true)
@@ -137,6 +169,15 @@ namespace Login_Form
                 CloseConnection();
             }
         }
+        /*
+         ====================================== 
+                     SynaStarfsmenn():
+         Notað: --> LoginYfirmaður.cs <--
+         Upplýsingar: Sýnir alla starfsmenn með því
+         að select-a allt úr töflunni 'starfsmenn'
+         þar sem Hlutverk = 'Starfsmaður'
+         ======================================
+        */
         public List<string> SynaStarfsmenn()
         {
             List<string> Faerslur = new List<string>();
@@ -160,8 +201,15 @@ namespace Login_Form
             }
             return Faerslur;
         }
-
-
+        /*
+         ====================================== 
+                     NafnaCheck():
+         Notað: --> Form1.cs <--
+         Upplýsingar: Athugar hvort að notendanafnið 
+         og email-ið sé rétt þegar notendur eru 
+         að stofna nýjan aðgang
+         ======================================
+        */
         public string NafnaCheck(string Notendanafn)
         {
             string Faerslur = null;
@@ -179,6 +227,15 @@ namespace Login_Form
             }
             return Faerslur;
         }
+        /*
+         ====================================== 
+                PasswordSettInnSqlToflu():
+         Notað: --> Form1.cs <--
+         Upplýsingar: Settur inn nýja password-ið
+         hjá nýjum notendum í gagnagrunninn(sem 
+         er auðvitað encryptaður)
+         ======================================
+        */
         public void PasswordSettInnSqlToflu(string password, string Notendanafn) //Aðferð til að setja í grunn
         {          
             if (OpenConnection() == true)
@@ -189,6 +246,14 @@ namespace Login_Form
                 CloseConnection();
             }
         }
+        /*
+         ====================================== 
+                        Eyda():
+         Notað: --> LoginYfirmaður.cs <--
+         Upplýsingar: Yfirmaður getur rekið/eytt
+         fólki út úr gagnagrunninum
+         ======================================
+        */
         public void Eyda(string nafn, string email)
         {           
             if (OpenConnection() == true)
@@ -199,6 +264,14 @@ namespace Login_Form
                 CloseConnection();
             }
         }
+        /*
+         ====================================== 
+                     notandanöfn():
+         Notað: --> RadaStarfsmann.cs <--
+         Upplýsingar: Athugar að engin sé með 
+         sömu notandanöfn
+         ======================================
+        */
         public List<string> notandanöfn()
         {         
                 List<string> Faerslur = new List<string>();
@@ -222,6 +295,14 @@ namespace Login_Form
                 }
                 return Faerslur;            
         }
+        /*
+         ====================================== 
+                       Motd():
+         Notað: --> LoginYfirmaður.cs <--
+         Upplýsingar: Leyfir yfirmenn að skrifa 
+         nýtt motd(Message of the Day)
+         ======================================
+        */
         public void Motd(string texti) 
         {
             if (OpenConnection() == true)
@@ -232,6 +313,15 @@ namespace Login_Form
                 CloseConnection();
             }
         }
+        /*
+         ====================================== 
+                       Motd2():
+         Notað: --> LoginStarfsmenn.cs <--
+         Upplýsingar: Select-ar textan úr töflunni
+         'motd' þannig starfsmenn geta séð
+         (Message of the Day)
+         ======================================
+        */
         public string Motd2()
         {
             string Faerslur = null;
@@ -250,6 +340,14 @@ namespace Login_Form
             }
             return Faerslur;
         }
+        /*
+         ====================================== 
+                     Innskra():
+         Notað: --> LoginYfirmaður.cs og LoginStarfsmenn.cs <--
+         Upplýsingar: Update-ar gagnagrunninn þannig 
+         að starfsmaður eða yfirmaður sé mættur
+         ======================================
+        */
         public void Innskra(string notendanafn)
         {
             if (OpenConnection() == true)
@@ -260,6 +358,14 @@ namespace Login_Form
                 CloseConnection();
             }
         }
+        /*
+         ====================================== 
+                     Utskra():
+         Notað: --> LoginYfirmaður.cs og LoginStarfsmenn.cs <--
+         Upplýsingar: Skráir fólk úr gangagrunninum
+         þannig þau er ekki mætt/búin að vinna
+         ======================================
+        */
         public void Utskra(string notendanafn)
         {
             if (OpenConnection() == true)
@@ -270,6 +376,14 @@ namespace Login_Form
                 CloseConnection();
             }
         }
+        /*
+         ====================================== 
+                     mæting():
+         Notað: --> LoginStarfsmenn.cs <--
+         Upplýsingar: Athugar hvort að maður sé
+         mættur
+         ======================================
+        */
         public string mæting(string notandanafn)
         {
             string geymsla = "3";
@@ -289,6 +403,16 @@ namespace Login_Form
             }
             return geymsla;
         }
+        /*
+         ====================================== 
+                     Veikur():
+         Notað: --> LoginYfirmaður.cs og LoginStarfsmenn.cs <--
+         Upplýsingar: Update-ar gagnagrunninn þannig 
+         að starfsmaður eða yfirmaður sé veikur
+         (ath. að ekki er hægt að skrá sig veikan
+         ef maður er í fríi eða mættur)
+         ======================================
+        */
         public void Veikur(string notendanafn)
         {
             if (OpenConnection() == true)
@@ -299,6 +423,14 @@ namespace Login_Form
                 CloseConnection();
             }
         }
+        /*
+         ====================================== 
+                     EkkiVeikur():
+         Notað: --> LoginYfirmaður.cs og LoginStarfsmenn.cs <--
+         Upplýsingar: Update-ar gagnagrunninn
+         þannig notendur eru ekki lengur veikt
+         ======================================
+        */
         public void EkkiVeikur(string notendanafn)
         {
             if (OpenConnection() == true)
@@ -309,6 +441,17 @@ namespace Login_Form
                 CloseConnection();
             }
         }
+        /*
+         ====================================== 
+                     FaraÍFrí():
+         Notað: --> LoginYfirmaður.cs og LoginStarfsmenn.cs <--
+         Upplýsingar: Update-ar gagnagrunninn þannig 
+         að starfsmaður eða yfirmaður sé settir
+         í frí(ath. að starfsmenn verða senda 
+         yfirmanni skilaboð ef þeir vilja komast
+         í frí)
+         ======================================
+        */
         public void FaraÍFrí(string notendanafn)
         {
             if (OpenConnection() == true)
@@ -319,6 +462,14 @@ namespace Login_Form
                 CloseConnection();
             }
         }
+        /*
+         ====================================== 
+                     FaraÚrFríi():
+         Notað: --> LoginYfirmaður.cs og LoginStarfsmenn.cs <--
+         Upplýsingar: Update-ar gagnagrunninn
+         þannig notendur eru ekki lengur í fríi
+         ======================================
+        */
         public void FaraÚrFríi(string notendanafn)
         {
             if (OpenConnection() == true)

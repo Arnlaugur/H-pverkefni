@@ -39,7 +39,6 @@ namespace Login_Form
                 btSkráSemMættur.Text = "Útskrá";
             }
         }
-
         /*
          ====================================== 
                      btSkráSemVeikur_Click:
@@ -60,7 +59,6 @@ namespace Login_Form
                 gagnagrunnur.EkkiVeikur(Notandi);
             }
         }
-
         /*
          ====================================== 
                      btSkráÍFrí_Click:
@@ -81,7 +79,6 @@ namespace Login_Form
                 gagnagrunnur.FaraÚrFríi(Notandi);
             }
         }
-
         /*
          ====================================== 
                      btSkráSemMættur_Click:
@@ -102,7 +99,6 @@ namespace Login_Form
                 gagnagrunnur.Utskra(Notandi);
             }
         }
-
         /*
          ====================================== 
                      LoginStarfsmenn_Load:

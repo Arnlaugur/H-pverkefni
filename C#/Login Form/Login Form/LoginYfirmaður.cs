@@ -27,7 +27,6 @@ namespace Login_Form
                 MessageBox.Show(ex.ToString());
             }
         }
-
         /*
          ====================================== 
                      btSýnaAlla_Click:
@@ -204,7 +203,6 @@ namespace Login_Form
                 MessageBox.Show("villa: " + ex);
             }
         }
-
         /*
          ====================================== 
                     btRekaStarfsmann_Click:
@@ -228,7 +226,6 @@ namespace Login_Form
             tbRekaNafn.Clear();
             tbRekaEmail.Clear();
         }
-
         /*
          ====================================== 
                      btMotd_Click:
@@ -243,7 +240,6 @@ namespace Login_Form
             MessageBox.Show("==============\nMessage of the day:\n==============\n" + motd);
             tbMotd.Clear();
         }
-
         /*
          ====================================== 
                     LoginYfirmaður_Load:
@@ -255,7 +251,6 @@ namespace Login_Form
         {
             labelNafn.Text = "Velkomin/n " + nafn;
         }
-
         /*
          ====================================== 
                     btSkráMættur_Click:
@@ -276,7 +271,6 @@ namespace Login_Form
                 gagnagrunnur.Utskra(nafn);
             }
         }
-
         /*
          ====================================== 
                     btSkráVeikur_Click:
