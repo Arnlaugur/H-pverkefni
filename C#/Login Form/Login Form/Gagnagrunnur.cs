@@ -382,5 +382,15 @@ namespace Login_Form
             }
             return Faerslur;
         }
+        public void EyðaSkilaboði(string Notendanafn)
+        {
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "DELETE skilaboð FROM skilaboð WHERE skilaboð LIKE '" + Notendanafn + "%'";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                sqllesari = nySQLskipun.ExecuteReader();
+                CloseConnection();
+            }
+        }
     }
 }

@@ -12,6 +12,7 @@ namespace Login_Form
 {
     public partial class Skilaboð : Form
     {
+        Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
         public Skilaboð()
         {
             
@@ -46,21 +47,27 @@ namespace Login_Form
             
             //List<string>;
         }
-        Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
+        
         private void bt_fri_Click(object sender, EventArgs e)
         {
             string Notandi = tb_nafn.Text;
             string email = tb_netfang.Text;
             string email2 = gagnagrunnur.NafnaCheck(Notandi);
-            if (bt_fri.Text == "senda í frí" && email2 == email)
+            if (bt_fri.Text == "Senda í frí" && email2 == email)
             {
                 bt_fri.Text = "Srká úr fríi";
                 gagnagrunnur.FaraÍFrí(Notandi);
             }
             else if (bt_fri.Text == "Skrá ír ´fríi")
             {
+                bt_fri.Text = "Senda í frí";
                 gagnagrunnur.FaraÚrFríi(Notandi);
             }
+            else
+            {
+                MessageBox.Show("Gögn passa ekki");
+            }
+            gagnagrunnur.EyðaSkilaboði(Notandi);
         }
     }
 }

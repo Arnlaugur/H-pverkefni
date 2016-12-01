@@ -42,15 +42,10 @@ namespace Login_Form
             {
                 MessageBox.Show("Notendanafn of langt");
             }
-            
 
             tb_Password.Text = PasswordB;
             List<string> linur = new List<string>();
-
-            string[] arr = new string[3];
-
-            ListViewItem itm;
-            
+         
             try
             {
                 
