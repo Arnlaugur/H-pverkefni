@@ -12,17 +12,17 @@ namespace Login_Form
 {
     public partial class LoginStarfsmenn : Form
     {
+        string nafn = null;
         string Notandi = null;
         string mætting = null;
         Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
-        string nafn = null;
         public LoginStarfsmenn(string xNotandi, string xnafn)
         {
             InitializeComponent();
             try
             {
-                Notandi = xNotandi;
                 gagnagrunnur.TengingVidGagnagrunn();
+                Notandi = xNotandi;
                 nafn = xnafn;
             }
             catch (Exception ex)
@@ -39,9 +39,15 @@ namespace Login_Form
                 btSkráSemMættur.Text = "Útskrá";
             }
         }
+        /*
+         ====================================== 
+                     btSkráSemVeikur_Click:
+         Notandi verður skráður sem 'veikur'
+         ef ýtt er á þennan takka
+         ======================================
+        */
         private void btSkráSemVeikur_Click(object sender, EventArgs e)
         {
-            
             if ( btSkráSemVeikur.Text == "Skrá sem veikur")
             {
                 btSkráSemVeikur.Text = "Skrá úr veikindum";
@@ -53,7 +59,13 @@ namespace Login_Form
                 gagnagrunnur.EkkiVeikur(Notandi);
             }
         }
-
+        /*
+         ====================================== 
+                     btSkráÍFrí_Click:
+         Notandi fær að biðja um frí og send verður 
+         skilaboð til yfirmanns ef ýtt er á þennan takka
+         ======================================
+        */
         private void btSkráIFrí_Click(object sender, EventArgs e)
         {
             if (btSkráIFrí.Text == "Skrá í frí")
@@ -70,10 +82,15 @@ namespace Login_Form
                 gagnagrunnur.FaraÚrFríi(Notandi);
             }
         }
-        
+        /*
+         ====================================== 
+                     btSkráSemMættur_Click:
+         Notandi verður skráður sem 'mættur'
+         ef ýtt er á þennan takka
+         ======================================
+        */
         private void btSkráSemMættur_Click(object sender, EventArgs e)
-        {
-            
+        {          
             if (btSkráSemMættur.Text == "Skrá sem mættur")
             {
                 btSkráSemMættur.Text = "Útskrá";
@@ -85,7 +102,13 @@ namespace Login_Form
                 gagnagrunnur.Utskra(Notandi);
             }
         }
-
+        /*
+         ====================================== 
+                     LoginStarfsmenn_Load:
+         Þegar LoginStarfsmenn load-ar þá heilsar
+         forritið þann notanda sem loggaði sig inn
+         ======================================
+        */
         private void LoginStarfsmenn_Load(object sender, EventArgs e)
         {
             labelVelkominn.Text = "Velkomin/n " + nafn;

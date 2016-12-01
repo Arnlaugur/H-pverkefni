@@ -98,6 +98,7 @@
             this.Controls.Add(this.bt_fri);
             this.Controls.Add(this.rtb_Skilaboð);
             this.Name = "Skilaboð";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Skilaboð";
             this.ResumeLayout(false);
             this.PerformLayout();
