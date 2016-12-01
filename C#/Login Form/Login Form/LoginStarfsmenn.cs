@@ -11,19 +11,17 @@ using System.Windows.Forms;
 namespace Login_Form
 {
     public partial class LoginStarfsmenn : Form
-    {
-        string nafn = null;
+    {        
         string Notandi = null;
         string mætting = null;
         Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
-        public LoginStarfsmenn(string xNotandi, string xnafn)
+        public LoginStarfsmenn(string xNotandi)
         {
             InitializeComponent();
             try
             {
                 gagnagrunnur.TengingVidGagnagrunn();
                 Notandi = xNotandi;
-                nafn = xnafn;
             }
             catch (Exception ex)
             {
@@ -72,7 +70,7 @@ namespace Login_Form
             {
                 btSkráIFrí.Text = "Skrá úr fríi";
                 gagnagrunnur.FaraÍFrí(Notandi);
-                btSkráIFrí.Text = "Srká úr fríi";
+                btSkráIFrí.Text = "Skrá úr fríi";
                 string skilaboð = Notandi + " biður um frí í dag";
                 gagnagrunnur.SetjaSkilaboðÍGrunn(skilaboð);
             }
@@ -111,8 +109,8 @@ namespace Login_Form
         */
         private void LoginStarfsmenn_Load(object sender, EventArgs e)
         {
-            labelVelkominn.Text = "Velkomin/n " + nafn;
-            labelMotd.Text = "Motd: " + gagnagrunnur.Motd2();
+            labelVelkominn.Text = "Velkomin/n " + Notandi;
+            labelMotd.Text = "Motd:\n" + gagnagrunnur.Motd2();
         }
     }
 }

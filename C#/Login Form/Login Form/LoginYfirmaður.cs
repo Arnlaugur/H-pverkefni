@@ -81,7 +81,6 @@ namespace Login_Form
                 MessageBox.Show("villa: " + ex);
             }
         }
-
         /*
          ====================================== 
                      btSýnaYfirmenn_Click:
@@ -136,7 +135,6 @@ namespace Login_Form
                 MessageBox.Show("villa: " + ex);
             }
         }
-
         /*
          ====================================== 
                     bt_Ráða_Click:
@@ -148,7 +146,6 @@ namespace Login_Form
             RadaStarfsmann Raða = new RadaStarfsmann();
             Raða.Show();
         }
-
         /*
          ====================================== 
                     btSýnaStarfsmenn_Click:
@@ -291,7 +288,6 @@ namespace Login_Form
                 gagnagrunnur.EkkiVeikur(nafn);
             }
         }
-
         /*
          ====================================== 
                     btFaraÍFrí_Click:
@@ -312,10 +308,124 @@ namespace Login_Form
                 gagnagrunnur.FaraÚrFríi(nafn);
             }
         }
+        /*
+         ====================================== 
+                    bt_Skilaboð_Click:
+         Opnar Skilaboð.cs
+         ======================================
+        */
         private void bt_Skilaboð_Click(object sender, EventArgs e)
         {
             Skilaboð Skilaboð = new Skilaboð();
             Skilaboð.Show();
+        }
+        /*
+         ====================================== 
+                    btSýnaMætta_Click:
+         Sýnir alla sem eru mættir
+         ======================================
+        */
+        private void btSýnaMætta_Click(object sender, EventArgs e)
+        {
+            listView1.Columns.Clear();
+            listView1.Items.Clear();
+            listView1.Columns.Add("Nafn", 100);
+            listView1.Columns.Add("Sími", 65);
+            listView1.Columns.Add("Email", 130);
+            listView1.Columns.Add("Mættur", 50);
+            listView1.Columns.Add("Veikur", 50);
+            listView1.Columns.Add("Hlutverk", 85);
+            listView1.Columns.Add("Notendanafn", 100);
+            listView1.Columns.Add("Frí", 30);
+            List<string> linur = new List<string>();
+            string[] arr = new string[8];
+            ListViewItem itm;
+            try
+            {
+                linur = gagnagrunnur.SynaMætta();
+                foreach (var lin in linur)
+                {
+                    string[] linaUrLista = lin.Split('-');
+                    string Nafn = linaUrLista[0];
+                    string Sími = linaUrLista[1];
+                    string Email = linaUrLista[2];
+                    string Mættur = linaUrLista[3];
+                    string Veikur = linaUrLista[4];
+                    string Hlutverk = linaUrLista[5];
+                    string Notendanafn = linaUrLista[6];
+                    string Frí = linaUrLista[7];
+
+                    arr[0] = Nafn;
+                    arr[1] = Sími;
+                    arr[2] = Email;
+                    arr[3] = Mættur;
+                    arr[4] = Veikur;
+                    arr[5] = Hlutverk;
+                    arr[6] = Notendanafn;
+                    arr[7] = Frí;
+
+                    itm = new ListViewItem(arr);
+                    listView1.Items.Add(itm);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("villa: " + ex);
+            }
+        }
+        /*
+         ====================================== 
+                    btSýnaÓMætta_Click:
+         Sýnir alla sem eru ekki mættir
+         ======================================
+        */
+        private void SýnaÓMætta_Click(object sender, EventArgs e)
+        {
+            listView1.Columns.Clear();
+            listView1.Items.Clear();
+            listView1.Columns.Add("Nafn", 100);
+            listView1.Columns.Add("Sími", 65);
+            listView1.Columns.Add("Email", 130);
+            listView1.Columns.Add("Mættur", 50);
+            listView1.Columns.Add("Veikur", 50);
+            listView1.Columns.Add("Hlutverk", 85);
+            listView1.Columns.Add("Notendanafn", 100);
+            listView1.Columns.Add("Frí", 30);
+            List<string> linur = new List<string>();
+            string[] arr = new string[8];
+            ListViewItem itm;
+            try
+            {
+                linur = gagnagrunnur.SynaÓMætta();
+                foreach (var lin in linur)
+                {
+                    string[] linaUrLista = lin.Split('-');
+                    string Nafn = linaUrLista[0];
+                    string Sími = linaUrLista[1];
+                    string Email = linaUrLista[2];
+                    string Mættur = linaUrLista[3];
+                    string Veikur = linaUrLista[4];
+                    string Hlutverk = linaUrLista[5];
+                    string Notendanafn = linaUrLista[6];
+                    string Frí = linaUrLista[7];
+
+                    arr[0] = Nafn;
+                    arr[1] = Sími;
+                    arr[2] = Email;
+                    arr[3] = Mættur;
+                    arr[4] = Veikur;
+                    arr[5] = Hlutverk;
+                    arr[6] = Notendanafn;
+                    arr[7] = Frí;
+
+                    itm = new ListViewItem(arr);
+                    listView1.Items.Add(itm);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("villa: " + ex);
+            }
         }
     }
 }

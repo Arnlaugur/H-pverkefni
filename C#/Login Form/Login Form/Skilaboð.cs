@@ -14,8 +14,7 @@ namespace Login_Form
     {
         Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
         public Skilaboð()
-        {
-            
+        {            
             InitializeComponent();
             try
             {
@@ -28,8 +27,7 @@ namespace Login_Form
             rtb_Skilaboð.Clear();
             List<string> linur = new List<string>();
             try
-            {
-                
+            {               
                 linur = gagnagrunnur.NáÍSkilaboð();
                 foreach (string lin in linur)
                 {
@@ -41,13 +39,17 @@ namespace Login_Form
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.ToString());
-            }
-            
+            }           
             //List<string>;
         }
-        
+        /*
+         ====================================== 
+                    bt_fri_Click:
+         Yfirmaður sendir starfsmenn í frí ef 
+         ýtt er á takkann
+         ======================================
+        */
         private void bt_fri_Click(object sender, EventArgs e)
         {
             string Notandi = tb_nafn.Text;
@@ -55,10 +57,10 @@ namespace Login_Form
             string email2 = gagnagrunnur.NafnaCheck(Notandi);
             if (bt_fri.Text == "Senda í frí" && email2 == email)
             {
-                bt_fri.Text = "Srká úr fríi";
+                bt_fri.Text = "Skrá úr fríi";
                 gagnagrunnur.FaraÍFrí(Notandi);
             }
-            else if (bt_fri.Text == "Skrá ír ´fríi")
+            else if (bt_fri.Text == "Skrá úr fríi")
             {
                 bt_fri.Text = "Senda í frí";
                 gagnagrunnur.FaraÚrFríi(Notandi);

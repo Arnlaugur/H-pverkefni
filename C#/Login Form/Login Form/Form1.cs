@@ -31,10 +31,15 @@ namespace Login_Form
                 MessageBox.Show(ex.ToString());
             }
         }
-
+        /*
+         ====================================== 
+                    bt_Login_Click:
+         Athugar hvort að starfsmaður eða yfirmaður
+         hafi loggað sér inn
+         ======================================
+        */
         private void bt_Login_Click(object sender, EventArgs e)
-        {
-            
+        {           
             string Notendanafn = tb_Notendanafn.Text;
             string PasswordA = tb_Password.Text;
             string PasswordB = Encryption(PasswordA);
@@ -42,15 +47,11 @@ namespace Login_Form
             {
                 MessageBox.Show("Notendanafn of langt");
             }
-
             tb_Password.Text = PasswordB;
-            List<string> linur = new List<string>();
-         
+            List<string> linur = new List<string>();        
             try
-            {
-                
-                linur = gagnagrunnur.LoginCheck(Notendanafn);
-                
+            {                
+                linur = gagnagrunnur.LoginCheck(Notendanafn);                
                 foreach (string lin in linur)
                 {
                     string[] linaUrLista = lin.Split('-');
@@ -62,7 +63,7 @@ namespace Login_Form
                     {
                         if (PasswordC == PasswordB)
                         {
-                            LoginStarfsmenn login = new LoginStarfsmenn(Notendanafn, "");
+                            LoginStarfsmenn login = new LoginStarfsmenn(Notendanafn);
                             login.Show();
                         }
                         else
@@ -101,14 +102,18 @@ namespace Login_Form
                 return Convert.ToBase64String(Data);
             }
         }
-        
+        /*
+         ====================================== 
+                    bt_Virkja_Click:
+         Virkjar password-in
+         ======================================
+        */
         private void bt_Virkja_Click(object sender, EventArgs e)
         {
             string Notendanafn = tb_NotendanafnVirkja.Text;
             string PasswordVirkjaA = tb_Lykilorð1.Text;
             string PasswordVirkjaB = tb_Lykilorð2.Text;
             string Email = tb_Email.Text;
-
             if (PasswordVirkjaA == PasswordVirkjaB)
             {
                 if (Email == gagnagrunnur.NafnaCheck(Notendanafn))
@@ -119,14 +124,12 @@ namespace Login_Form
                 else
                 {
                     MessageBox.Show("Gögn passa ekki við notanda í gagnagrunn");
-                }
-                
+                }               
             }
             else
             {
                 MessageBox.Show("Lykkilorð ekki alveg eins");
             }
-        }
-        
+        }        
     }
 }
