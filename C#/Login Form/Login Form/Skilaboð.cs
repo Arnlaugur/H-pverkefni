@@ -40,13 +40,11 @@ namespace Login_Form
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
-<<<<<<< HEAD
             }
-=======
-            }           
-            //List<string>;
->>>>>>> Vegur-Bjarki
+                    
+           
         }
+
         /*
          ====================================== 
                     bt_fri_Click:
