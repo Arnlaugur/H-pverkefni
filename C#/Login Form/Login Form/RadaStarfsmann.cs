@@ -43,28 +43,30 @@ namespace Login_Form
                 string nafn1 = "";
                 string nafn2 = "";
                 nafn1 = linaUrLista[0];
-                nafn2 = linaUrLista[1];
-               
+                if (tb_Nafn.Text.Contains(' '))
+                {
+                    nafn2 = linaUrLista[1];
+                }
                 if (nafn2 == "")
                 {
-                    if (nafn1.Length > 6)
+                    if (nafn1.Count() >= 6)
                     {
                         notandanafn = nafn1.Substring(0, 6);
                     }
-                    else if (nafn1.Length == 5)
+                    else if (nafn1.Count() == 5)
                     {
                         notandanafn = nafn1 + "1";
                     }
-                    else if (nafn1.Length == 4)
+                    else if (nafn1.Count() == 4)
                     {
                         notandanafn = nafn1 + "10";
                     }
-                    else if (nafn1.Length == 3)
+                    else if (nafn1.Count() == 3)
                     {
                         notandanafn = nafn1 + "100";
                     }                 
                 }
-                else if (nafn2.Length < 3)
+                else if (nafn2.Count() <= 3)
                 {
                     notandanafn = nafn1.Substring(0, 3) + nafn2 + "1";
                 }
@@ -73,8 +75,7 @@ namespace Login_Form
                     notandanafn = nafn1.Substring(0, 3) + nafn2.Substring(0, 3);
                 }           
             }
-            List<string> notendanöfn = new List<string>();
-            notendanöfn = gagnagrunnur.notandanöfn();          
+            gagnagrunnur.SettInnSqlToflu(tb_Nafn.Text , tb_Simi.Text , tb_Email.Text , tb_Hlutverk.Text , notandanafn);     
         }
     }
 }

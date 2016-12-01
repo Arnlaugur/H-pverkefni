@@ -44,8 +44,6 @@ namespace Login_Form
 
                 MessageBox.Show(ex.ToString());
             }
-            
-            //List<string>;
         }
         
         private void bt_fri_Click(object sender, EventArgs e)
