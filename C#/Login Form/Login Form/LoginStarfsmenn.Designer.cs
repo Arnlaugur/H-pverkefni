@@ -39,10 +39,11 @@
             // 
             this.labelVelkominn.AutoSize = true;
             this.labelVelkominn.BackColor = System.Drawing.SystemColors.Control;
+            this.labelVelkominn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVelkominn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelVelkominn.Location = new System.Drawing.Point(12, 12);
+            this.labelVelkominn.Location = new System.Drawing.Point(226, 9);
             this.labelVelkominn.Name = "labelVelkominn";
-            this.labelVelkominn.Size = new System.Drawing.Size(15, 13);
+            this.labelVelkominn.Size = new System.Drawing.Size(17, 15);
             this.labelVelkominn.TabIndex = 0;
             this.labelVelkominn.Text = "**";
             // 
@@ -82,9 +83,10 @@
             // labelMotd
             // 
             this.labelMotd.AutoSize = true;
-            this.labelMotd.Location = new System.Drawing.Point(234, 9);
+            this.labelMotd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMotd.Location = new System.Drawing.Point(12, 9);
             this.labelMotd.Name = "labelMotd";
-            this.labelMotd.Size = new System.Drawing.Size(15, 13);
+            this.labelMotd.Size = new System.Drawing.Size(17, 15);
             this.labelMotd.TabIndex = 4;
             this.labelMotd.Text = "**";
             // 

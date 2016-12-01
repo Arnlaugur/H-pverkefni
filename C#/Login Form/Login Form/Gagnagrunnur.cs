@@ -37,7 +37,6 @@ namespace Login_Form
             }
             catch (MySqlException ex)
             {
-
                 throw ex;
             }
         }
@@ -50,7 +49,6 @@ namespace Login_Form
             }
             catch (MySqlException ex)
             {
-
                 throw ex;
             }
         }
@@ -69,6 +67,70 @@ namespace Login_Form
             if (OpenConnection() == true)
             {
                 fyrirspurn = "SELECT hlutverk, notendanafn, password FROM Starfsmenn WHERE notendanafn = '"+ Notendanafn +"'";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                sqllesari = nySQLskipun.ExecuteReader();
+                while (sqllesari.Read())
+                {
+                    for (int i = 0; i < sqllesari.FieldCount; i++)
+                    {
+                        lina += (sqllesari.GetValue(i).ToString()) + "-";
+                    }
+                    Faerslur.Add(lina);
+                    lina = null;
+                }
+                CloseConnection();
+                return Faerslur;
+            }
+            return Faerslur;
+        }
+        /*
+         ====================================== 
+                     SynaMætta():
+         Notað: --> LoginYfirmaður.cs <--
+         Upplýsingar: Sýnir alla sem eru mættir
+         með því að select-a allt úr töflunni
+         'starfsmenn' þar sem Mættur = '1'
+         ======================================
+        */
+        public List<string> SynaMætta()
+        {
+            List<string> Faerslur = new List<string>();
+            string lina = null;
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "SELECT Nafn, Sími, Email, Mættur, Veikur, Hlutverk, Notendanafn, Frí FROM starfsmenn WHERE Mættur = '1'";
+                nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
+                sqllesari = nySQLskipun.ExecuteReader();
+                while (sqllesari.Read())
+                {
+                    for (int i = 0; i < sqllesari.FieldCount; i++)
+                    {
+                        lina += (sqllesari.GetValue(i).ToString()) + "-";
+                    }
+                    Faerslur.Add(lina);
+                    lina = null;
+                }
+                CloseConnection();
+                return Faerslur;
+            }
+            return Faerslur;
+        }
+        /*
+         ====================================== 
+                     SynaÓMætta():
+         Notað: --> LoginYfirmaður.cs <--
+         Upplýsingar: Sýnir alla sem eru ekki
+         mættir með því að select-a allt úr töflunni
+         'starfsmenn' þar sem Mættur = '0'
+         ======================================
+        */
+        public List<string> SynaÓMætta()
+        {
+            List<string> Faerslur = new List<string>();
+            string lina = null;
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "SELECT Nafn, Sími, Email, Mættur, Veikur, Hlutverk, Notendanafn, Frí FROM starfsmenn WHERE Mættur = '0'";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 sqllesari = nySQLskipun.ExecuteReader();
                 while (sqllesari.Read())
@@ -480,6 +542,14 @@ namespace Login_Form
                 CloseConnection();
             }
         }
+        /*
+         ====================================== 
+                     SetjaSkilaboðÍGrunn():
+         Notað: --> Skilaboð.cs <--
+         Upplýsingar: Setur skilaboðin sem starfs-
+         maður skrifar, inn í gagnagrunninn
+         ======================================
+        */
         public void SetjaSkilaboðÍGrunn(string skilaboð)
         {
             if (OpenConnection() == true)
@@ -490,6 +560,14 @@ namespace Login_Form
                 CloseConnection();
             }
         }
+        /*
+         ====================================== 
+                     NáÍSkilaboð():
+         Notað: --> Skilaboð.cs <--
+         Upplýsingar: Nær í skilaboðin fyrir 
+         yfirmann til að sjá
+         ======================================
+        */
         public List<string> NáÍSkilaboð()
         {
             List<string> Faerslur = new List<string>();
@@ -514,6 +592,14 @@ namespace Login_Form
             }
             return Faerslur;
         }
+        /*
+         ====================================== 
+                     EyðaSkilaboði():
+         Notað: --> Skilaboð.cs <--
+         Upplýsingar: Eyðir skilaboðin ef yfir-
+         maðurinn sendir þau í frí
+         ======================================
+        */
         public void EyðaSkilaboði(string Notendanafn)
         {
             if (OpenConnection() == true)

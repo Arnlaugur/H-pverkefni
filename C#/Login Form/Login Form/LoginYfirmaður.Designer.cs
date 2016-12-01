@@ -46,6 +46,8 @@
             this.btSkráVeikur = new System.Windows.Forms.Button();
             this.btFaraÍFrí = new System.Windows.Forms.Button();
             this.bt_Skilaboð = new System.Windows.Forms.Button();
+            this.btSýnaMætta = new System.Windows.Forms.Button();
+            this.SýnaÓMætta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView1
@@ -55,7 +57,7 @@
             this.listView1.Location = new System.Drawing.Point(176, 12);
             this.listView1.Name = "listView1";
             this.listView1.Scrollable = false;
-            this.listView1.Size = new System.Drawing.Size(610, 436);
+            this.listView1.Size = new System.Drawing.Size(610, 454);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -71,7 +73,7 @@
             // 
             // btSýnaStarfsmenn
             // 
-            this.btSýnaStarfsmenn.Location = new System.Drawing.Point(12, 196);
+            this.btSýnaStarfsmenn.Location = new System.Drawing.Point(12, 216);
             this.btSýnaStarfsmenn.Name = "btSýnaStarfsmenn";
             this.btSýnaStarfsmenn.Size = new System.Drawing.Size(158, 23);
             this.btSýnaStarfsmenn.TabIndex = 2;
@@ -81,7 +83,7 @@
             // 
             // btSýnaYfirmenn
             // 
-            this.btSýnaYfirmenn.Location = new System.Drawing.Point(12, 225);
+            this.btSýnaYfirmenn.Location = new System.Drawing.Point(12, 245);
             this.btSýnaYfirmenn.Name = "btSýnaYfirmenn";
             this.btSýnaYfirmenn.Size = new System.Drawing.Size(158, 23);
             this.btSýnaYfirmenn.TabIndex = 3;
@@ -91,7 +93,7 @@
             // 
             // btRekaStarfsmann
             // 
-            this.btRekaStarfsmann.Location = new System.Drawing.Point(12, 283);
+            this.btRekaStarfsmann.Location = new System.Drawing.Point(12, 303);
             this.btRekaStarfsmann.Name = "btRekaStarfsmann";
             this.btRekaStarfsmann.Size = new System.Drawing.Size(158, 23);
             this.btRekaStarfsmann.TabIndex = 4;
@@ -101,14 +103,14 @@
             // 
             // tbRekaNafn
             // 
-            this.tbRekaNafn.Location = new System.Drawing.Point(90, 312);
+            this.tbRekaNafn.Location = new System.Drawing.Point(90, 332);
             this.tbRekaNafn.Name = "tbRekaNafn";
             this.tbRekaNafn.Size = new System.Drawing.Size(80, 20);
             this.tbRekaNafn.TabIndex = 5;
             // 
             // tbRekaEmail
             // 
-            this.tbRekaEmail.Location = new System.Drawing.Point(52, 338);
+            this.tbRekaEmail.Location = new System.Drawing.Point(52, 358);
             this.tbRekaEmail.Name = "tbRekaEmail";
             this.tbRekaEmail.Size = new System.Drawing.Size(118, 20);
             this.tbRekaEmail.TabIndex = 6;
@@ -116,7 +118,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 315);
+            this.label2.Location = new System.Drawing.Point(12, 335);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 7;
@@ -125,7 +127,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 341);
+            this.label3.Location = new System.Drawing.Point(12, 361);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 8;
@@ -133,7 +135,7 @@
             // 
             // bt_Ráða
             // 
-            this.bt_Ráða.Location = new System.Drawing.Point(12, 254);
+            this.bt_Ráða.Location = new System.Drawing.Point(12, 274);
             this.bt_Ráða.Name = "bt_Ráða";
             this.bt_Ráða.Size = new System.Drawing.Size(158, 23);
             this.bt_Ráða.TabIndex = 9;
@@ -143,7 +145,7 @@
             // 
             // btMotd
             // 
-            this.btMotd.Location = new System.Drawing.Point(13, 364);
+            this.btMotd.Location = new System.Drawing.Point(13, 384);
             this.btMotd.Name = "btMotd";
             this.btMotd.Size = new System.Drawing.Size(157, 23);
             this.btMotd.TabIndex = 11;
@@ -153,7 +155,7 @@
             // 
             // btSýnaAlla
             // 
-            this.btSýnaAlla.Location = new System.Drawing.Point(12, 167);
+            this.btSýnaAlla.Location = new System.Drawing.Point(12, 187);
             this.btSýnaAlla.Name = "btSýnaAlla";
             this.btSýnaAlla.Size = new System.Drawing.Size(158, 23);
             this.btSýnaAlla.TabIndex = 12;
@@ -163,7 +165,7 @@
             // 
             // tbMotd
             // 
-            this.tbMotd.Location = new System.Drawing.Point(49, 398);
+            this.tbMotd.Location = new System.Drawing.Point(49, 418);
             this.tbMotd.Name = "tbMotd";
             this.tbMotd.Size = new System.Drawing.Size(118, 20);
             this.tbMotd.TabIndex = 13;
@@ -171,7 +173,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 401);
+            this.label4.Location = new System.Drawing.Point(9, 421);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 13);
             this.label4.TabIndex = 14;
@@ -179,7 +181,7 @@
             // 
             // btSkráMættur
             // 
-            this.btSkráMættur.Location = new System.Drawing.Point(12, 67);
+            this.btSkráMættur.Location = new System.Drawing.Point(13, 38);
             this.btSkráMættur.Name = "btSkráMættur";
             this.btSkráMættur.Size = new System.Drawing.Size(158, 23);
             this.btSkráMættur.TabIndex = 15;
@@ -189,7 +191,7 @@
             // 
             // btSkráVeikur
             // 
-            this.btSkráVeikur.Location = new System.Drawing.Point(12, 96);
+            this.btSkráVeikur.Location = new System.Drawing.Point(13, 67);
             this.btSkráVeikur.Name = "btSkráVeikur";
             this.btSkráVeikur.Size = new System.Drawing.Size(158, 23);
             this.btSkráVeikur.TabIndex = 16;
@@ -199,7 +201,7 @@
             // 
             // btFaraÍFrí
             // 
-            this.btFaraÍFrí.Location = new System.Drawing.Point(12, 125);
+            this.btFaraÍFrí.Location = new System.Drawing.Point(13, 96);
             this.btFaraÍFrí.Name = "btFaraÍFrí";
             this.btFaraÍFrí.Size = new System.Drawing.Size(158, 23);
             this.btFaraÍFrí.TabIndex = 17;
@@ -209,7 +211,7 @@
             // 
             // bt_Skilaboð
             // 
-            this.bt_Skilaboð.Location = new System.Drawing.Point(13, 424);
+            this.bt_Skilaboð.Location = new System.Drawing.Point(13, 444);
             this.bt_Skilaboð.Name = "bt_Skilaboð";
             this.bt_Skilaboð.Size = new System.Drawing.Size(155, 23);
             this.bt_Skilaboð.TabIndex = 15;
@@ -217,11 +219,33 @@
             this.bt_Skilaboð.UseVisualStyleBackColor = true;
             this.bt_Skilaboð.Click += new System.EventHandler(this.bt_Skilaboð_Click);
             // 
+            // btSýnaMætta
+            // 
+            this.btSýnaMætta.Location = new System.Drawing.Point(13, 129);
+            this.btSýnaMætta.Name = "btSýnaMætta";
+            this.btSýnaMætta.Size = new System.Drawing.Size(157, 23);
+            this.btSýnaMætta.TabIndex = 18;
+            this.btSýnaMætta.Text = "Sýna mætta";
+            this.btSýnaMætta.UseVisualStyleBackColor = true;
+            this.btSýnaMætta.Click += new System.EventHandler(this.btSýnaMætta_Click);
+            // 
+            // SýnaÓMætta
+            // 
+            this.SýnaÓMætta.Location = new System.Drawing.Point(12, 158);
+            this.SýnaÓMætta.Name = "SýnaÓMætta";
+            this.SýnaÓMætta.Size = new System.Drawing.Size(158, 23);
+            this.SýnaÓMætta.TabIndex = 19;
+            this.SýnaÓMætta.Text = "Sýna ómætta";
+            this.SýnaÓMætta.UseVisualStyleBackColor = true;
+            this.SýnaÓMætta.Click += new System.EventHandler(this.SýnaÓMætta_Click);
+            // 
             // LoginYfirmaður
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(797, 460);
+            this.ClientSize = new System.Drawing.Size(797, 478);
+            this.Controls.Add(this.SýnaÓMætta);
+            this.Controls.Add(this.btSýnaMætta);
             this.Controls.Add(this.btFaraÍFrí);
             this.Controls.Add(this.btSkráVeikur);
             this.Controls.Add(this.btSkráMættur);
@@ -269,5 +293,7 @@
         private System.Windows.Forms.Button btSkráVeikur;
         private System.Windows.Forms.Button btFaraÍFrí;
         private System.Windows.Forms.Button bt_Skilaboð;
+        private System.Windows.Forms.Button btSýnaMætta;
+        private System.Windows.Forms.Button SýnaÓMætta;
     }
 }
