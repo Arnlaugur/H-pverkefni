@@ -16,18 +16,13 @@ namespace Login_Form
         string Notandi = null;
         string mætting = null;
         Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
-<<<<<<< HEAD
-        string nafn = null;
         public LoginStarfsmenn(string xNotandi, string xnafn)
-=======
-        public LoginStarfsmenn(string xnafn, string xNotandi)
->>>>>>> Vegur-Bjarki
         {
             InitializeComponent();
             try
             {
-                Notandi = xNotandi;
                 gagnagrunnur.TengingVidGagnagrunn();
+                Notandi = xNotandi;
                 nafn = xnafn;
             }
             catch (Exception ex)
