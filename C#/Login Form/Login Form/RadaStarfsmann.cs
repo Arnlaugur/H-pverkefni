@@ -14,8 +14,7 @@ namespace Login_Form
     {
         Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
         public RadaStarfsmann()
-        {
-            
+        {          
             InitializeComponent();
             try
             {
@@ -26,16 +25,20 @@ namespace Login_Form
                 MessageBox.Show(ex.ToString());
             }
         }
-
+        /*
+         ====================================== 
+                     bt_Raða_Click:
+         Leyfir yfirmann að ráða nýjan starfsmann
+         ef ýtt er á takkan
+         ======================================
+        */
         private void bt_Raða_Click(object sender, EventArgs e)
-        {
-            
+        {            
             List<string> linur = new List<string>();
             linur.Add(tb_Nafn.Text);
             string notandanafn = null;
             foreach (string lin in linur)
-            {
-                
+            {               
                 string[] linaUrLista = lin.Split(' ');
                 string nafn1 = "";
                 string nafn2 = "";
@@ -59,8 +62,7 @@ namespace Login_Form
                     else if (nafn1.Length == 3)
                     {
                         notandanafn = nafn1 + "100";
-                    }
-                   
+                    }                 
                 }
                 else if (nafn2.Length < 3)
                 {
@@ -69,19 +71,10 @@ namespace Login_Form
                 else
                 {
                     notandanafn = nafn1.Substring(0, 3) + nafn2.Substring(0, 3);
-                }
-            
+                }           
             }
             List<string> notendanöfn = new List<string>();
-            notendanöfn = gagnagrunnur.notandanöfn();
-
-            
-                
-            
-            
-            
-            
-            
+            notendanöfn = gagnagrunnur.notandanöfn();          
         }
     }
 }
