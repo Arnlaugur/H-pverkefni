@@ -274,8 +274,7 @@ namespace Login_Form
         */
         public List<string> notandanöfn()
         {         
-                List<string> Faerslur = new List<string>();
-                string lina = null;               
+                List<string> Faerslur = new List<string>();               
                 if (OpenConnection() == true)
                 {
                     fyrirspurn = "SELECT Nafn FROM Starfsmenn";
@@ -285,10 +284,8 @@ namespace Login_Form
                     {
                         for (int i = 0; i < sqllesari.FieldCount; i++)
                         {
-                            lina += (sqllesari.GetValue(i).ToString()) + "-";
+                            Faerslur.Add(sqllesari.GetValue(i).ToString());
                         }
-                        Faerslur.Add(lina);
-                        lina = null;
                     }
                     CloseConnection();
                     return Faerslur;

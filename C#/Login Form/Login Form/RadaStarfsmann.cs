@@ -33,7 +33,9 @@ namespace Login_Form
          ======================================
         */
         private void bt_Raða_Click(object sender, EventArgs e)
-        {            
+        {
+            List<string> Notandacheck = new List<string>();
+            Notandacheck = gagnagrunnur.notandanöfn();
             List<string> linur = new List<string>();
             linur.Add(tb_Nafn.Text);
             string notandanafn = null;
@@ -74,6 +76,18 @@ namespace Login_Form
                 {
                     notandanafn = nafn1.Substring(0, 3) + nafn2.Substring(0, 3);
                 }           
+            }
+            int tala = 0;
+            for (int i = 0; i < 9; i++)
+            {
+                foreach (string nöfn in Notandacheck)
+                {
+                    if (nöfn == notandanafn)
+                    {
+                        notandanafn = notandanafn.Substring(0, 5) + tala.ToString();
+                        tala++;
+                    }
+                }
             }
             gagnagrunnur.SettInnSqlToflu(tb_Nafn.Text , tb_Simi.Text , tb_Email.Text , tb_Hlutverk.Text , notandanafn);     
         }
