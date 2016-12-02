@@ -37,45 +37,59 @@ namespace Login_Form
             List<string> linur = new List<string>();
             linur.Add(tb_Nafn.Text);
             string notandanafn = null;
-            foreach (string lin in linur)
-            {               
-                string[] linaUrLista = lin.Split(' ');
-                string nafn1 = "";
-                string nafn2 = "";
-                nafn1 = linaUrLista[0];
-                if (tb_Nafn.Text.Contains(' '))
+            if (tb_Email.Text.Contains('@') && tb_Email.Text.Contains('.'))
+            {
+                if (tb_Simi.Text.Count() == 7)
                 {
-                    nafn2 = linaUrLista[1];
-                }
-                if (nafn2 == "")
-                {
-                    if (nafn1.Count() >= 6)
+                    foreach (string lin in linur)
                     {
-                        notandanafn = nafn1.Substring(0, 6);
+                        string[] linaUrLista = lin.Split(' ');
+                        string nafn1 = "";
+                        string nafn2 = "";
+                        nafn1 = linaUrLista[0];
+                        if (tb_Nafn.Text.Contains(' '))
+                        {
+                            nafn2 = linaUrLista[1];
+                        }
+                        if (nafn2 == "")
+                        {
+                            if (nafn1.Count() >= 6)
+                            {
+                                notandanafn = nafn1.Substring(0, 6);
+                            }
+                            else if (nafn1.Count() == 5)
+                            {
+                                notandanafn = nafn1 + "1";
+                            }
+                            else if (nafn1.Count() == 4)
+                            {
+                                notandanafn = nafn1 + "10";
+                            }
+                            else if (nafn1.Count() == 3)
+                            {
+                                notandanafn = nafn1 + "100";
+                            }
+                        }
+                        else if (nafn2.Count() <= 3)
+                        {
+                            notandanafn = nafn1.Substring(0, 3) + nafn2 + "1";
+                        }
+                        else
+                        {
+                            notandanafn = nafn1.Substring(0, 3) + nafn2.Substring(0, 3);
+                        }
                     }
-                    else if (nafn1.Count() == 5)
-                    {
-                        notandanafn = nafn1 + "1";
-                    }
-                    else if (nafn1.Count() == 4)
-                    {
-                        notandanafn = nafn1 + "10";
-                    }
-                    else if (nafn1.Count() == 3)
-                    {
-                        notandanafn = nafn1 + "100";
-                    }                 
-                }
-                else if (nafn2.Count() <= 3)
-                {
-                    notandanafn = nafn1.Substring(0, 3) + nafn2 + "1";
+                    gagnagrunnur.SettInnSqlToflu(tb_Nafn.Text, tb_Simi.Text, tb_Email.Text, tb_Hlutverk.Text, notandanafn);
                 }
                 else
                 {
-                    notandanafn = nafn1.Substring(0, 3) + nafn2.Substring(0, 3);
-                }           
+                    MessageBox.Show("Símanúmer er ekki 7 staffir");
+                }
             }
-            gagnagrunnur.SettInnSqlToflu(tb_Nafn.Text , tb_Simi.Text , tb_Email.Text , tb_Hlutverk.Text , notandanafn);     
-        }
+            else
+            {
+                MessageBox.Show("Email er ekki rétt");
+            }
+       }
     }
 }
