@@ -40,9 +40,11 @@ namespace Login_Form
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
-            }           
-            //List<string>;
+            }
+                    
+           
         }
+
         /*
          ====================================== 
                     bt_fri_Click:
